@@ -7,7 +7,7 @@
 <title>Pequlieer | You need it. We connect it.</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><div class="floating-shape shape-one" aria-hidden="true"></div><div class="floating-shape shape-two" aria-hidden="true"></div>
 <header class="site-header">
   <div class="nav">
     <a class="brand" href="#home" aria-label="Pequlieer home">PEQULIEER</a>
@@ -23,7 +23,7 @@
 <main>
 <section id="home" class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">CAPE TOWN · SERVICE CONNECTION</p>
+    <p class="eyebrow">CAPE TOWN · SERVICE CONNECTION</p><div class="hero-kicker">ONE PLACE <span>•</span> MANY POSSIBILITIES</div>
     <h1>You need it.<br><span>We connect it.</span></h1>
     <p class="hero-copy">Whatever you need, tell us. We'll try to find the right person to help.</p>
     <a class="button primary" href="#enquiry">Tell Us What You Need <span>→</span></a>
@@ -59,29 +59,29 @@
     <p class="section-intro">These are some of the services we can help connect in Cape Town. If you don't see what you need, ask us anyway.</p>
 
     <div class="feature-list">
-      <article class="feature feature-dark">
+      <article class="feature feature-dark service-card" data-service="Home & Property">
         <div><span class="feature-number">01</span><h3>Home & Property</h3><p>Handyman work, maintenance, painting, plumbing, electrical, cleaning and more.</p><a href="#enquiry">Explore this service →</a></div>
         <div class="visual visual-home" aria-hidden="true"><span>HOME</span></div>
       </article>
 
-      <article class="feature">
+      <article class="feature service-card" data-service="Repairs & Metalwork">
         <div><span class="feature-number">02</span><h3>Repairs & Metalwork</h3><p>Welding, gates, fences, burglar bars and general metal repairs.</p><a href="#enquiry">Explore this service →</a></div>
         <div class="visual visual-metal" aria-hidden="true"><span>REPAIR</span></div>
       </article>
 
       <div class="feature-pair">
-        <article class="mini-feature"><span class="feature-number">03</span><h3>Moving & Physical Help</h3><p>Moving assistance, loading, unloading, packing and furniture help.</p><a href="#enquiry">Ask us →</a></article>
-        <article class="mini-feature accent"><span class="feature-number">04</span><h3>Education & Tutoring</h3><p>School support, exam preparation, English and ESL tutoring.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature service-card" data-service="Moving & Physical Help"><span class="feature-number">03</span><h3>Moving & Physical Help</h3><p>Moving assistance, loading, unloading, packing and furniture help.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature accent service-card" data-service="Education & Tutoring"><span class="feature-number">04</span><h3>Education & Tutoring</h3><p>School support, exam preparation, English and ESL tutoring.</p><a href="#enquiry">Ask us →</a></article>
       </div>
 
       <div class="feature-pair">
-        <article class="mini-feature"><span class="feature-number">05</span><h3>Digital & Technology</h3><p>Websites, hosting, computers and basic digital support.</p><a href="#enquiry">Ask us →</a></article>
-        <article class="mini-feature"><span class="feature-number">06</span><h3>Family & Childcare</h3><p>Babysitting, childcare and practical family assistance.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature service-card" data-service="Digital & Technology"><span class="feature-number">05</span><h3>Digital & Technology</h3><p>Websites, hosting, computers and basic digital support.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature service-card" data-service="Family & Childcare"><span class="feature-number">06</span><h3>Family & Childcare</h3><p>Babysitting, childcare and practical family assistance.</p><a href="#enquiry">Ask us →</a></article>
       </div>
 
       <div class="feature-pair">
-        <article class="mini-feature accent"><span class="feature-number">07</span><h3>Events & Catering</h3><p>Catering, décor, setup, photography and post-event help.</p><a href="#enquiry">Ask us →</a></article>
-        <article class="mini-feature"><span class="feature-number">08</span><h3>Tourism & Visitors</h3><p>Transfers, drivers, tours, sightseeing, food experiences and local help.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature accent service-card" data-service="Events & Catering"><span class="feature-number">07</span><h3>Events & Catering</h3><p>Catering, décor, setup, photography and post-event help.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature service-card" data-service="Tourism & Visitors"><span class="feature-number">08</span><h3>Tourism & Visitors</h3><p>Transfers, drivers, tours, sightseeing, food experiences and local help.</p><a href="#enquiry">Ask us →</a></article>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@
       <label>Email <span>optional</span><input name="Email" type="email" placeholder="Your email"></label>
       <label>Where are you located? <span>optional</span><input name="Location" type="text" placeholder="Area in Cape Town"></label>
       <label>When do you need it? <span>optional</span><input name="When" type="text" placeholder="As soon as possible, next week, etc."></label>
-      <label>What do you need help with? <span>optional</span><textarea name="Request" rows="6" placeholder="Tell us what you need..."></textarea></label>
+      <label>What do you need help with? <span>optional</span><textarea id="request" name="Request" rows="6" placeholder="Tell us what you need..."></textarea></label><p id="selected-service" class="selected-service" aria-live="polite">No service selected — that is completely fine.</p>
       <button class="button primary full" type="submit">Send Enquiry <span>→</span></button>
       <p class="form-note">We'll review your enquiry and get back to you.</p>
     </form>
@@ -126,5 +126,21 @@
   </div>
   <div class="wide copyright">© 2026 Pequlieer. All rights reserved.</div>
 </footer>
-</body>
+<script>
+(function(){
+ const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),selected=document.getElementById("selected-service");
+ cards.forEach(card=>{
+  card.tabIndex=0;
+  const choose=()=>{
+   const service=card.dataset.service;
+   request.value=(request.value.trim()?request.value+"\n\n":"")+"Service: "+service+"\n\n";
+   selected.textContent="Selected: "+service+" — tell us what you need and we will take it from there.";
+   document.getElementById("enquiry").scrollIntoView({behavior:"smooth",block:"start"});
+   request.focus();
+  };
+  card.addEventListener("click",choose);
+  card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();choose();}});
+ });
+})();
+</script></body>
 </html>
