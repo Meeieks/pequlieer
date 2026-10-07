@@ -9,9 +9,9 @@
 </head>
 <body>
 <header class="site-header">
-  <div class="container nav">
+  <div class="nav">
     <a class="brand" href="#home" aria-label="Pequlieer home">PEQULIEER</a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#how">How It Works</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -22,28 +22,26 @@
 
 <main>
 <section id="home" class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">CAPE TOWN • SERVICE CONNECTION</p>
-      <h1>You need it.<br><span>We connect it.</span></h1>
-      <p class="hero-copy">Whatever you need, tell us. We'll try to find the right person to help.</p>
-      <div class="actions">
-        <a class="button primary" href="#enquiry">Tell Us What You Need</a>
-        <a class="button secondary" href="#how">See How It Works</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <span class="card-label">PEQULIEER</span>
-      <h2>One enquiry.<br>One point of contact.</h2>
-      <p>You explain what you need. We understand the job, look for a suitable person and coordinate the next steps.</p>
-    </div>
+  <div class="hero-inner">
+    <p class="eyebrow">CAPE TOWN · SERVICE CONNECTION</p>
+    <h1>You need it.<br><span>We connect it.</span></h1>
+    <p class="hero-copy">Whatever you need, tell us. We'll try to find the right person to help.</p>
+    <a class="button primary" href="#enquiry">Tell Us What You Need <span>→</span></a>
   </div>
 </section>
 
-<section id="how" class="section">
-  <div class="container">
+<section class="statement">
+  <div class="wide">
+    <p class="eyebrow">THE PEQULIEER WAY</p>
+    <h2>One enquiry.<br>One point of contact.</h2>
+    <p>You explain what you need. We understand the job, look for a suitable person and coordinate the next steps.</p>
+  </div>
+</section>
+
+<section id="how" class="section how">
+  <div class="wide">
     <p class="eyebrow">HOW IT WORKS</p>
-    <h2>Simple for you. Organised behind the scenes.</h2>
+    <h2>Simple for you.<br>Organised behind the scenes.</h2>
     <div class="steps">
       <article><b>01</b><h3>Tell us</h3><p>Explain what you need in your own words.</p></article>
       <article><b>02</b><h3>We understand</h3><p>We ask the questions needed to understand the job.</p></article>
@@ -55,36 +53,51 @@
 </section>
 
 <section id="services" class="section services">
-  <div class="container">
-    <p class="eyebrow">WHAT WE CAN HELP WITH</p>
-    <h2>A starting point — not a limit.</h2>
+  <div class="wide">
+    <p class="eyebrow">SERVICES</p>
+    <h2>A starting point.<br>Not a limit.</h2>
     <p class="section-intro">These are some of the services we can help connect in Cape Town. If you don't see what you need, ask us anyway.</p>
-    <div class="service-grid">
-      <a href="#enquiry"><span>01</span><h3>Home & Property</h3><p>Handyman work, maintenance, painting, plumbing, electrical, cleaning and more.</p></a>
-      <a href="#enquiry"><span>02</span><h3>Repairs & Metalwork</h3><p>Welding, gates, fences, burglar bars and general metal repairs.</p></a>
-      <a href="#enquiry"><span>03</span><h3>Moving & Physical Help</h3><p>Moving assistance, loading, unloading, packing and furniture help.</p></a>
-      <a href="#enquiry"><span>04</span><h3>Education & Tutoring</h3><p>School support, exam preparation, English and ESL tutoring.</p></a>
-      <a href="#enquiry"><span>05</span><h3>Digital & Technology</h3><p>Websites, hosting, computers and basic digital support.</p></a>
-      <a href="#enquiry"><span>06</span><h3>Family & Childcare</h3><p>Babysitting, childcare and practical family assistance.</p></a>
-      <a href="#enquiry"><span>07</span><h3>Events & Catering</h3><p>Catering, décor, setup, photography and post-event help.</p></a>
-      <a href="#enquiry"><span>08</span><h3>Tourism & Visitors</h3><p>Transfers, drivers, tours, sightseeing, food experiences and local help.</p></a>
+
+    <div class="feature-list">
+      <article class="feature feature-dark">
+        <div><span class="feature-number">01</span><h3>Home & Property</h3><p>Handyman work, maintenance, painting, plumbing, electrical, cleaning and more.</p><a href="#enquiry">Explore this service →</a></div>
+        <div class="visual visual-home" aria-hidden="true"><span>HOME</span></div>
+      </article>
+
+      <article class="feature">
+        <div><span class="feature-number">02</span><h3>Repairs & Metalwork</h3><p>Welding, gates, fences, burglar bars and general metal repairs.</p><a href="#enquiry">Explore this service →</a></div>
+        <div class="visual visual-metal" aria-hidden="true"><span>REPAIR</span></div>
+      </article>
+
+      <div class="feature-pair">
+        <article class="mini-feature"><span class="feature-number">03</span><h3>Moving & Physical Help</h3><p>Moving assistance, loading, unloading, packing and furniture help.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature accent"><span class="feature-number">04</span><h3>Education & Tutoring</h3><p>School support, exam preparation, English and ESL tutoring.</p><a href="#enquiry">Ask us →</a></article>
+      </div>
+
+      <div class="feature-pair">
+        <article class="mini-feature"><span class="feature-number">05</span><h3>Digital & Technology</h3><p>Websites, hosting, computers and basic digital support.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature"><span class="feature-number">06</span><h3>Family & Childcare</h3><p>Babysitting, childcare and practical family assistance.</p><a href="#enquiry">Ask us →</a></article>
+      </div>
+
+      <div class="feature-pair">
+        <article class="mini-feature accent"><span class="feature-number">07</span><h3>Events & Catering</h3><p>Catering, décor, setup, photography and post-event help.</p><a href="#enquiry">Ask us →</a></article>
+        <article class="mini-feature"><span class="feature-number">08</span><h3>Tourism & Visitors</h3><p>Transfers, drivers, tours, sightseeing, food experiences and local help.</p><a href="#enquiry">Ask us →</a></article>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="callout">
-  <div class="container callout-inner">
-    <div>
-      <p class="eyebrow">NOT ON THE LIST?</p>
-      <h2>Tell us anyway.</h2>
-      <p>We don't currently have someone in our network for every service, but we'll try to find someone who can help.</p>
-    </div>
-    <a class="button light" href="#enquiry">Ask Pequlieer</a>
+<section class="not-listed">
+  <div class="wide">
+    <p class="eyebrow">NOT ON THE LIST?</p>
+    <h2>Tell us anyway.</h2>
+    <p>We don't currently have someone in our network for every service, but we'll try to find someone who can help.</p>
+    <a class="button light" href="#enquiry">Ask Pequlieer <span>→</span></a>
   </div>
 </section>
 
 <section id="enquiry" class="section enquiry">
-  <div class="container enquiry-grid">
+  <div class="wide enquiry-grid">
     <div>
       <p class="eyebrow">START HERE</p>
       <h2>Tell us what you need.</h2>
@@ -98,7 +111,7 @@
       <label>Where are you located? <span>optional</span><input name="Location" type="text" placeholder="Area in Cape Town"></label>
       <label>When do you need it? <span>optional</span><input name="When" type="text" placeholder="As soon as possible, next week, etc."></label>
       <label>What do you need help with? <span>optional</span><textarea name="Request" rows="6" placeholder="Tell us what you need..."></textarea></label>
-      <button class="button primary full" type="submit">Send Enquiry</button>
+      <button class="button primary full" type="submit">Send Enquiry <span>→</span></button>
       <p class="form-note">We'll review your enquiry and get back to you.</p>
     </form>
   </div>
@@ -106,12 +119,12 @@
 </main>
 
 <footer id="contact">
-  <div class="container footer-grid">
+  <div class="wide footer-grid">
     <div><a class="brand footer-brand" href="#home">PEQULIEER</a><p>You need it. We connect it.</p></div>
     <div><p class="footer-title">Cape Town</p><p>Service connection & coordination</p></div>
     <div><p class="footer-title">Contact</p><p><a href="mailto:info@pequlieer.co.za">info@pequlieer.co.za</a></p></div>
   </div>
-  <div class="container copyright">© 2026 Pequlieer. All rights reserved.</div>
+  <div class="wide copyright">© 2026 Pequlieer. All rights reserved.</div>
 </footer>
 </body>
 </html>
