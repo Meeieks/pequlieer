@@ -71,7 +71,6 @@
 <label>What type of help do you need<select name="Service" id="service-select"><option value="">Choose a category</option><option>Home & Property</option><option>Repairs & Metalwork</option><option>Moving & Physical Help</option><option>Education & Tutoring</option><option>Digital & Technology</option><option>Family & Childcare</option><option>Events & Catering</option><option>Tourism & Visitors</option><option>Something Else</option></select></label>
 <label>When do you need it<input name="When" type="text" placeholder="As soon as possible, next week, etc."></label>
 <label>What do you need help with<textarea id="request" name="Request" rows="6" placeholder="Tell us what you need..."></textarea></label>
-<p id="selected-service" class="selected-service" aria-live="polite">No service selected — that is completely fine.</p>
 <button class="button primary full" type="submit">Send Enquiry <span>→</span></button><p class="form-note">We'll review your enquiry and get back to you.</p>
 </form>
 </div></section>
@@ -84,10 +83,10 @@
 <a class="whatsapp-float" href="https://wa.me/27681226185?text=Hi%20Pequlieer%2C%20I%20need%20help%20with%20a%20service." target="_blank" rel="noopener" aria-label="Chat with Pequlieer on WhatsApp">Chat with Pequlieer</a>
 <script>
 (function(){
-const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),selected=document.getElementById("selected-service"),serviceSelect=document.getElementById("service-select");
-function addRequest(text,service){if(!request)return;request.value=(request.value.trim()?request.value+"\n\n":"")+text;if(service&&serviceSelect)serviceSelect.value=service;if(selected)selected.textContent=service?"Selected: "+service+" — tell us what you need and we will take it from there.":"We've added an example to your request — edit it to suit you.";}
+const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),serviceSelect=document.getElementById("service-select");
+function addRequest(text,service){if(!request)return;request.value=(request.value.trim()?request.value+"\n\n":"")+text;if(service&&serviceSelect)serviceSelect.value=service;}
 cards.forEach(card=>{card.tabIndex=0;const choose=()=>{const service=card.dataset.service;addRequest("Service: "+service+"\n\n",service);document.getElementById("enquiry").scrollIntoView({behavior:"smooth",block:"start"});request.focus();};card.addEventListener("click",choose);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();choose();}});});
-if(serviceSelect)serviceSelect.addEventListener("change",()=>{if(serviceSelect.value)addRequest("Service: "+serviceSelect.value+"\n\n",serviceSelect.value);else if(selected)selected.textContent="No service selected — that is completely fine.";});
+if(serviceSelect)serviceSelect.addEventListener("change",()=>{if(serviceSelect.value)addRequest("Service: "+serviceSelect.value+"\n\n",serviceSelect.value);});
 document.querySelectorAll("[data-request]").forEach(link=>{link.addEventListener("click",()=>{setTimeout(()=>{addRequest(link.dataset.request);if(request)request.focus();},350);});});
 })();
 </script>
