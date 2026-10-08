@@ -24,8 +24,8 @@
 <section id="home" class="hero">
   <div class="hero-inner">
     <p class="eyebrow">CAPE TOWN · SERVICE CONNECTION</p><div class="hero-kicker">ONE PLACE <span>•</span> MANY POSSIBILITIES</div>
-    <h1>You need it.<br><span>We connect it.</span></h1>
-    <p class="hero-copy">Whatever you need, tell us. We'll try to find the right person to help.</p>
+    <h1>Need It?<br><span>We’ll Connect You.</span></h1>
+    <p class="hero-copy">Pequlieer connects you with trusted local services, people and solutions across Cape Town.</p>
     <a class="button primary" href="#enquiry">Tell Us What You Need <span>→</span></a>
     <div class="hero-photo-strip" aria-label="Examples of services Pequlieer can help connect">
       <img src="https://giftedhandforlife.co.za/assets/project-handyman-kuilsriver-BdO1Ojf8.jpg" alt="Handyman repairing a door handle" loading="eager">
@@ -57,6 +57,19 @@
   </div>
 </section>
 
+
+<section class="why section">
+  <div class="wide">
+    <p class="eyebrow">WHY PEQULIEER?</p>
+    <h2>One place to start.<br>Less searching for you.</h2>
+    <div class="why-grid">
+      <article><b>01</b><h3>Tell us what you need</h3><p>Describe the job, problem or service in your own words.</p></article>
+      <article><b>02</b><h3>We help find the right person</h3><p>We connect you with someone suitable from our local network.</p></article>
+      <article><b>03</b><h3>Cape Town focused</h3><p>We focus on helping people find services and support around Cape Town.</p></article>
+      <article><b>04</b><h3>Simple & convenient</h3><p>One enquiry gives you one clear place to start.</p></article>
+    </div>
+  </div>
+</section>
 <section id="services" class="section services">
   <div class="wide">
     <p class="eyebrow">SERVICES</p>
@@ -134,6 +147,7 @@
       <label>WhatsApp / Phone <span>optional</span><input name="Phone" type="tel" placeholder="How can we reach you?"></label>
       <label>Email <span>optional</span><input name="Email" type="email" placeholder="Your email"></label>
       <label>Where are you located? <span>optional</span><input name="Location" type="text" placeholder="Area in Cape Town"></label>
+      <label>What type of help do you need? <span>optional</span><select name="Service" id="service-select"><option value="">Choose a category</option><option>Home & Property</option><option>Repairs & Metalwork</option><option>Moving & Physical Help</option><option>Education & Tutoring</option><option>Digital & Technology</option><option>Family & Childcare</option><option>Events & Catering</option><option>Tourism & Visitors</option><option>Something Else</option></select></label>
       <label>When do you need it? <span>optional</span><input name="When" type="text" placeholder="As soon as possible, next week, etc."></label>
       <label>What do you need help with? <span>optional</span><textarea id="request" name="Request" rows="6" placeholder="Tell us what you need..."></textarea></label><p id="selected-service" class="selected-service" aria-live="polite">No service selected — that is completely fine.</p>
       <button class="button primary full" type="submit">Send Enquiry <span>→</span></button>
@@ -147,22 +161,25 @@
   <div class="wide footer-grid">
     <div><a class="brand footer-brand" href="#home">PEQULIEER</a><p>You need it. We connect it.</p></div>
     <div><p class="footer-title">Cape Town</p><p>Service connection & coordination</p></div>
-    <div><p class="footer-title">Contact</p><p><a href="mailto:info@pequlieer.co.za">info@pequlieer.co.za</a></p></div>
+    <div><p class="footer-title">Contact</p><p><a href="mailto:info@pequlieer.co.za">info@pequlieer.co.za</a></p><p><a href="https://wa.me/27281226185" target="_blank" rel="noopener">WhatsApp: 028 122 6185</a></p></div>
   </div>
   <div class="wide copyright">© 2026 Pequlieer. All rights reserved.</div>
 </footer>
+<a class="whatsapp-float" href="https://wa.me/27281226185?text=Hi%20Pequlieer%2C%20I%20need%20help%20with%20a%20service." target="_blank" rel="noopener" aria-label="Chat with Pequlieer on WhatsApp">WhatsApp</a>
 <script>
 (function(){
- const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),selected=document.getElementById("selected-service");
+ const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),selected=document.getElementById("selected-service"),serviceSelect=document.getElementById("service-select");
  cards.forEach(card=>{
   card.tabIndex=0;
   const choose=()=>{
    const service=card.dataset.service;
    request.value=(request.value.trim()?request.value+"\n\n":"")+"Service: "+service+"\n\n";
+   if(serviceSelect) serviceSelect.value=service;
    selected.textContent="Selected: "+service+" — tell us what you need and we will take it from there.";
    document.getElementById("enquiry").scrollIntoView({behavior:"smooth",block:"start"});
    request.focus();
   };
+  if(serviceSelect) serviceSelect.addEventListener("change",()=>{ if(serviceSelect.value){selected.textContent="Selected: "+serviceSelect.value+" — tell us what you need and we will take it from there."; request.value=(request.value.trim()?request.value+"\n\n":"")+"Service: "+serviceSelect.value+"\n\n";} });
   card.addEventListener("click",choose);
   card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();choose();}});
  });
