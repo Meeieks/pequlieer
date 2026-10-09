@@ -420,3 +420,286 @@ footer{background:#192f29;padding:58px 0 22px}
   .browse-heading .section-intro{font-size:.93rem}
   .browse-all{margin-top:17px}
 }
+
+
+/* New search-first hero: marketplace-inspired, but designed for Pequlieer */
+html{scroll-padding-top:92px}
+section[id]{scroll-margin-top:92px}
+.hero{
+  text-align:left;
+  align-items:stretch;
+  min-height:0;
+  background:linear-gradient(115deg,#f3f5f0 0%,#faf9f5 58%,#f1f0e8 100%);
+  border-bottom:1px solid #e5e7df;
+}
+.market-hero-layout{
+  width:min(1180px,90%);
+  max-width:1180px;
+  margin:auto;
+  padding:64px 0 58px;
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);
+  gap:58px;
+  align-items:center;
+}
+.market-hero-copy{max-width:none;min-width:0}
+.market-hero-copy .hero-kicker{
+  display:inline-flex;
+  margin:0 0 22px;
+  background:#e6ede6;
+  border:1px solid #d7e1d7;
+  color:#355447;
+  border-radius:5px;
+}
+.market-hero-copy .hero h1{color:var(--dark)}
+.market-hero-copy h1{
+  max-width:740px;
+  color:#203f36;
+  font-size:clamp(3.5rem,6vw,5.7rem);
+  line-height:.99;
+  letter-spacing:-.055em;
+}
+.market-hero-copy h1 span{color:#b66c4d}
+.market-hero-copy .hero-copy{
+  max-width:620px;
+  margin:22px 0 24px;
+  font-size:1.02rem;
+  line-height:1.75;
+  color:#606e65;
+}
+.market-hero-copy .service-search{
+  width:100%;
+  max-width:740px;
+  margin:0 0 12px;
+  padding:7px;
+  border:1px solid #d9dfd7;
+  border-radius:11px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(32,63,54,.07);
+  gap:8px;
+}
+.market-hero-copy .service-search input{
+  min-width:0;
+  padding:14px 15px;
+  font-size:.96rem;
+}
+.market-hero-copy .service-search button{
+  border-radius:7px;
+  background:#b66c4d;
+  padding:14px 17px;
+  white-space:nowrap;
+}
+.market-hero-copy .service-search button:hover{background:#97583f}
+.search-examples{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0 22px;
+  font-size:.77rem;
+  color:#68746d;
+}
+.search-examples>span{font-weight:700;margin-right:2px}
+.search-examples button{
+  border:1px solid #e0e4dc;
+  background:rgba(255,255,255,.72);
+  border-radius:5px;
+  padding:5px 9px;
+  color:#506257;
+  font:600 .76rem "DM Sans",sans-serif;
+  cursor:pointer;
+}
+.search-examples button:hover{background:#e7eee6;border-color:#b9cbb9}
+.market-hero-copy .hero-actions{justify-content:flex-start;gap:10px}
+.market-hero-copy .hero-actions .button{border-radius:7px}
+.market-hero-copy .button.light{background:transparent;border-color:#ccd7cd}
+.market-hero-panel{
+  position:relative;
+  min-width:0;
+  padding:29px 28px 25px;
+  background:#fff;
+  border:1px solid #e2e6de;
+  border-radius:15px;
+  box-shadow:0 18px 44px rgba(32,63,54,.075);
+}
+.market-panel-top{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#657369;
+  font-size:.65rem;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+.market-panel-dot{width:8px;height:8px;background:#b66c4d;border-radius:50%}
+.market-panel-divider{color:#c6cfc5}
+.market-hero-panel h2{
+  margin:23px 0 12px;
+  color:#203f36;
+  font:600 clamp(1.85rem,3vw,2.55rem)/1.12 "Playfair Display",serif;
+  letter-spacing:-.035em;
+}
+.market-hero-panel h2 span{color:#b66c4d}
+.market-hero-panel>p{margin:0 0 20px;color:#6a756d;font-size:.89rem;line-height:1.65}
+.market-panel-list{display:grid;gap:0}
+.market-panel-item{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:14px 0;
+  border-top:1px solid #eceee8;
+}
+.market-panel-number{
+  flex:0 0 34px;
+  width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;
+  background:#edf2ec;
+  color:#345547;
+  font-size:.72rem;font-weight:800;
+}
+.market-panel-item strong{display:block;color:#2d4035;font-size:.86rem;line-height:1.35}
+.market-panel-item small{display:block;margin-top:3px;color:#7a847c;font-size:.75rem;line-height:1.4}
+.market-panel-link{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:10px;padding-top:18px;border-top:1px solid #e7eae3;
+  color:#315d48;text-decoration:none;font-weight:700;font-size:.82rem;
+}
+.market-panel-link:hover{color:#b66c4d}
+.popular{background:#fff}
+.browse-heading{margin-bottom:24px}
+.browse-heading h2{font-size:clamp(2.2rem,4vw,3.3rem)}
+.category-search-status{
+  margin:0 0 17px;
+  padding:12px 15px;
+  background:#edf2ec;
+  color:#365546;
+  border:1px solid #dce6da;
+  border-radius:7px;
+  font-size:.85rem;
+}
+.category-search-status[hidden]{display:none!important}
+.popular-grid .popular-card[hidden]{display:none!important}
+.popular-grid a.popular-card{
+  text-align:left;
+  min-height:100px;
+  padding:16px;
+}
+.category-cta-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;
+  margin-top:23px;padding-top:22px;border-top:1px solid #e9eae4;
+}
+.category-cta-row p{margin:0;color:#68746d;font-size:.88rem}
+.category-cta-row .button{border-radius:7px;padding:11px 16px;font-size:.8rem}
+.popular-footnote{display:none}
+
+/* Shared layout for the dedicated customer enquiry and provider registration pages */
+.standalone-page{background:#f6f6f1}
+.standalone-main{
+  min-height:calc(100vh - 250px);
+  padding:36px 0 78px;
+  background:linear-gradient(135deg,#f0f3ef 0%,#faf9f5 48%,#f2f0e7 100%);
+}
+.standalone-container{width:min(1140px,90%);margin:0 auto}
+.standalone-back{
+  display:inline-flex;align-items:center;gap:8px;
+  margin:0 0 30px;
+  color:#53685c;text-decoration:none;font-weight:700;font-size:.82rem;
+}
+.standalone-back:hover{color:#b66c4d}
+.standalone-layout{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:65px;
+  align-items:start;
+}
+.standalone-copy{padding-top:18px}
+.standalone-copy h1{
+  margin:0 0 20px;
+  color:#203f36;
+  font:600 clamp(3rem,5.5vw,4.8rem)/1.02 "Playfair Display",serif;
+  letter-spacing:-.045em;
+}
+.standalone-copy h1 span{color:#b66c4d}
+.standalone-lead{max-width:500px;color:#626f66;font-size:1.02rem;line-height:1.8}
+.standalone-points{margin-top:30px;border-top:1px solid #e0e5dd}
+.standalone-points>div{display:flex;align-items:flex-start;gap:14px;padding:17px 0;border-bottom:1px solid #e0e5dd}
+.standalone-points>div>span{
+  flex:0 0 32px;width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:7px;background:#e3ebe2;color:#355747;
+  font-size:.7rem;font-weight:800;
+}
+.standalone-points p{margin:0;color:#68746d;font-size:.82rem;line-height:1.65}
+.standalone-points strong{color:#2c4035;font-size:.88rem}
+.standalone-note{margin-top:24px;color:#778078;font-size:.77rem;line-height:1.7}
+.standalone-form{
+  width:100%;
+  margin:0;
+  padding:30px;
+  background:#fff;
+  border:1px solid #e0e5dc;
+  border-radius:13px;
+  box-shadow:0 16px 38px rgba(32,63,54,.08);
+}
+.standalone-form-heading{padding-bottom:17px;margin-bottom:8px;border-bottom:1px solid #e9ece5}
+.standalone-form-heading .eyebrow{margin-bottom:8px}
+.standalone-form-heading h2{margin:0 0 6px;color:#203f36;font:600 1.85rem/1.2 "Playfair Display",serif}
+.standalone-form-heading p:not(.eyebrow){margin:0;color:#778078;font-size:.78rem}
+.standalone-form label{margin:14px 0 0;color:#34473b;font-size:.81rem;font-weight:700}
+.standalone-form label span{font-weight:400;color:#788178;font-size:.76rem}
+.standalone-form input,.standalone-form select,.standalone-form textarea{
+  margin-top:6px;
+  padding:12px 13px;
+  border:1px solid #dfe4dc;
+  border-radius:7px;
+  background:#fcfcfa;
+  font-size:.88rem;
+}
+.standalone-form input:focus,.standalone-form select:focus,.standalone-form textarea:focus{border-color:#9db29f;box-shadow:0 0 0 3px rgba(60,100,75,.10)}
+.standalone-form .button{margin-top:22px;border-radius:7px;padding:14px}
+.standalone-form .form-note{margin:13px 0 0;font-size:.74rem;line-height:1.6}
+.standalone-status{margin:8px 0 0;color:#315d48;font-size:.79rem;line-height:1.55}
+.standalone-footer{background:#192f29;color:#c4d0c8;padding:28px 0 30px}
+.standalone-footer p{margin:8px 0;font-size:.82rem;color:#aebdb6}
+.standalone-footer a:not(.brand){display:inline-block;color:#fff;text-decoration:none;font-size:.82rem;margin-top:6px}
+.standalone-footer a:not(.brand):hover{color:#e3c48c}
+.standalone-footer .brand{color:#fff}
+.standalone-footer .standalone-container{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.standalone-footer .standalone-container>p{margin:0}
+.standalone-footer .standalone-container>a:last-child{margin-left:auto}
+@media(max-width:900px){
+  .market-hero-layout{grid-template-columns:minmax(0,1fr);gap:28px;padding:50px 0}
+  .market-hero-copy h1{font-size:clamp(3.35rem,9vw,5rem)}
+  .market-hero-panel{max-width:650px}
+  .standalone-layout{grid-template-columns:1fr;gap:34px}
+  .standalone-copy{padding-top:0}
+  .standalone-points{max-width:650px}
+}
+@media(max-width:520px){
+  .market-hero-layout{padding:42px 0 36px;gap:25px}
+  .market-hero-copy h1{font-size:clamp(2.8rem,12vw,3.7rem)}
+  .market-hero-copy .hero-copy{font-size:.96rem;margin:18px 0}
+  .market-hero-copy .service-search{border-radius:9px;flex-direction:column;align-items:stretch;padding:9px;gap:7px}
+  .market-hero-copy .service-search input{width:100%;padding:12px 10px}
+  .market-hero-copy .service-search button{width:100%;padding:12px}
+  .search-examples{gap:7px;margin-bottom:18px}
+  .market-hero-copy .hero-actions{align-items:stretch}
+  .market-hero-copy .hero-actions .button{width:auto;max-width:none;flex:1;padding:12px 13px;font-size:.77rem}
+  .market-hero-panel{padding:23px 20px;border-radius:11px}
+  .market-panel-top{font-size:.59rem;letter-spacing:.07em}
+  .market-hero-panel h2{font-size:2rem}
+  .browse-heading h2{font-size:2.2rem}
+  .category-cta-row{align-items:stretch}
+  .category-cta-row .button{align-self:flex-start}
+  .standalone-main{padding:27px 0 52px}
+  .standalone-back{margin-bottom:20px}
+  .standalone-copy h1{font-size:3rem}
+  .standalone-lead{font-size:.94rem}
+  .standalone-form{padding:22px 18px;border-radius:10px}
+  .standalone-form-heading h2{font-size:1.6rem}
+  .standalone-footer .standalone-container{display:block}
+  .standalone-footer .standalone-container>p{margin:8px 0}
+  .standalone-footer .standalone-container>a:last-child{margin-left:0}
+}
