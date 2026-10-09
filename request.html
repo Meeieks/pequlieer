@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="standalone-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="nav">
     <a class="brand" href="index.html" aria-label="Pequlieer home">PEQULIEER</a>
@@ -16,7 +17,7 @@
     <a class="nav-cta" href="index.html#browse-services">Browse Categories</a>
   </div>
 </header>
-<main class="standalone-main">
+<main id="main-content" class="standalone-main" tabindex="-1">
   <div class="standalone-container">
     <a class="standalone-back" href="index.html#browse-services">← Back to service categories</a>
     <div class="standalone-layout">
@@ -31,8 +32,8 @@
         </div>
         <p class="standalone-note">Pequlieer helps you find a suitable provider for your request. Service details, scheduling and pricing are discussed directly with the provider before work begins.</p>
       </div>
-      <form class="standalone-form" id="customer-request-form">
-        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2>What can we help with?</h2><p>Tell us a few details so we can understand your request.</p></div>
+      <form class="standalone-form" id="customer-request-form" aria-labelledby="customer-form-title" aria-describedby="customer-required-note">
+        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2 id="customer-form-title">What can we help with?</h2><p>Tell us a few details so we can understand your request.</p><p class="form-required-note" id="customer-required-note">Fields marked * are required. Your browser will explain if a required field needs attention.</p></div>
         <div class="request-selection-summary" id="request-selection-summary" aria-live="polite">
           <span class="request-selection-icon" aria-hidden="true">✓</span>
           <div class="request-selection-copy">
@@ -77,7 +78,7 @@
         <textarea id="customer-details" name="Request details" rows="5" placeholder="Describe what you need, the job, or the problem..." required></textarea>
         <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
         <p class="form-note">When you continue, WhatsApp opens with your enquiry ready to review and send.</p>
-        <p id="customer-form-status" class="standalone-status" aria-live="polite"></p>
+        <p id="customer-form-status" class="standalone-status" aria-live="polite" aria-atomic="true"></p>
       </form>
     </div>
   </div>
