@@ -32,7 +32,7 @@
         <p class="standalone-note">We welcome service providers across Cape Town. Share your details so we can learn more about the services you offer.</p>
       </div>
       <form class="standalone-form" id="provider-registration-form">
-        <div class="standalone-form-heading"><p class="eyebrow">PROVIDER REGISTRATION</p><h2>Tell us about your service</h2><p>Fields marked with * are required.</p></div>
+        <div class="standalone-form-heading"><p class="eyebrow">PROVIDER REGISTRATION</p><h2>Tell us about your service</h2><p>Share the details customers would need to understand what you offer.</p></div>
         <label for="provider-name">Your name *</label>
         <input id="provider-name" name="Name" type="text" placeholder="Your full name" autocomplete="name" required>
         <label for="provider-business">Business name <span>(optional)</span></label>
@@ -54,6 +54,14 @@
         </select>
         <label for="provider-specific">Specific service *</label>
         <input id="provider-specific" name="Specific service" type="text" placeholder="e.g. plumbing, tutoring, catering" required>
+        <div class="request-selection-summary provider-selection-summary" id="provider-selection-summary" aria-live="polite">
+          <span class="request-selection-icon" aria-hidden="true">✓</span>
+          <div class="request-selection-copy">
+            <p>YOUR SERVICE PROFILE</p>
+            <strong id="provider-selection-title">Choose your main service</strong>
+            <span id="provider-selection-description">Your service summary will update as you fill in the form.</span>
+          </div>
+        </div>
         <label for="provider-area">Areas you serve *</label>
         <input id="provider-area" name="Service areas" type="text" placeholder="e.g. Bellville, Parow, Cape Town" required>
         <label for="provider-experience">Experience or qualifications <span>(optional)</span></label>
@@ -71,6 +79,32 @@
 <script>
 (function(){
   const form = document.getElementById("provider-registration-form");
+  const serviceField = document.getElementById("provider-service");
+  const specificField = document.getElementById("provider-specific");
+  const areaField = document.getElementById("provider-area");
+  const summary = document.getElementById("provider-selection-summary");
+  const summaryTitle = document.getElementById("provider-selection-title");
+  const summaryDescription = document.getElementById("provider-selection-description");
+
+  function updateProviderSummary(){
+    const category = serviceField.value.trim();
+    const specific = specificField.value.trim();
+    const area = areaField.value.trim();
+    summaryTitle.textContent = specific || category || "Choose your main service";
+    const details = [];
+    if(category) details.push(category);
+    if(area) details.push("Serving " + area);
+    summaryDescription.textContent = details.length
+      ? details.join(" · ")
+      : "Your service summary will update as you fill in the form.";
+    summary.classList.toggle("has-selection",Boolean(category || specific));
+  }
+
+  serviceField.addEventListener("change",updateProviderSummary);
+  specificField.addEventListener("input",updateProviderSummary);
+  areaField.addEventListener("input",updateProviderSummary);
+  updateProviderSummary();
+
   form.addEventListener("submit", function(event){
     event.preventDefault();
     if(!form.reportValidity()) return;
@@ -78,15 +112,15 @@
       ["Name", document.getElementById("provider-name").value.trim()],
       ["Business name", document.getElementById("provider-business").value.trim()],
       ["Phone / WhatsApp", document.getElementById("provider-phone").value.trim()],
-      ["Service category", document.getElementById("provider-service").value],
-      ["Specific service", document.getElementById("provider-specific").value.trim()],
-      ["Service areas", document.getElementById("provider-area").value.trim()],
+      ["Service category", serviceField.value],
+      ["Specific service", specificField.value.trim()],
+      ["Service areas", areaField.value.trim()],
       ["Experience or qualifications", document.getElementById("provider-experience").value.trim()]
     ];
     const message = "Hi Pequlieer, I’d like to join the local service provider network.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
     const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
     window.open(url, "_blank", "noopener,noreferrer");
-    document.getElementById("provider-form-status").textContent = "WhatsApp should open in a new tab with your registration ready. Please press Send there to submit your details.";
+    document.getElementById("provider-form-status").textContent = "WhatsApp is opening with your registration. Please check the details and press Send to submit them to Pequlieer.";
   });
 })();
 </script>
