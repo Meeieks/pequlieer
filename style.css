@@ -261,3 +261,162 @@ footer{background:#192f29;padding:58px 0 22px}
   .popular-card-copy strong{font-size:.88rem}
   .popular-card-copy small{font-size:.73rem}
 }
+
+
+/* Service-marketplace direction: practical search-first layout and category directory */
+.hero{
+  min-height:auto;
+  text-align:left;
+  align-items:center;
+  background:linear-gradient(180deg,#f0f3ef 0%,#f8f7f2 100%);
+  border-bottom:1px solid #e4e7df;
+}
+.hero-inner{
+  width:min(1180px,90%);
+  padding:66px 0 55px;
+  margin:auto;
+}
+.market-hero-copy{max-width:940px}
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  background:#e1e9e2;
+  color:#294c40;
+  border:1px solid #d2dfd4;
+  border-radius:5px;
+  margin-bottom:20px;
+  padding:7px 11px;
+}
+.hero h1{
+  max-width:780px;
+  color:#202d26;
+  font-size:clamp(3rem,6.2vw,5.6rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+.hero h1 span{color:#b66c4d}
+.hero h1 span:after{height:3px;bottom:-5px;right:25%}
+.hero-copy{
+  max-width:690px;
+  margin:23px 0 22px;
+  font-size:1.06rem;
+  color:#5e6b63;
+}
+.service-search{
+  max-width:780px;
+  margin:25px 0 16px;
+  border:1px solid #d5dbd3;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(36,58,46,.055);
+}
+.service-search input{padding:13px 15px}
+.service-search button{border-radius:7px;background:#b66c4d}
+.service-search button:hover{background:#9d583d}
+.hero-actions{justify-content:flex-start}
+.hero-actions .button{border-radius:8px}
+.market-hero-notes{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-top:25px;
+  color:#647168;
+  font-size:.82rem;
+}
+.market-hero-notes span{display:inline-flex;align-items:center;gap:8px}
+.market-hero-notes b{
+  display:inline-flex;
+  width:19px;height:19px;
+  align-items:center;justify-content:center;
+  border-radius:50%;
+  background:#e0e9df;
+  color:#315d48;
+  font-size:.72rem;
+}
+.popular{
+  background:#fff;
+  border-bottom:1px solid #e6e7df;
+}
+.popular .wide{width:min(1180px,90%)}
+.browse-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:25px;
+}
+.browse-heading h2{
+  font-size:clamp(2.25rem,4.2vw,3.5rem);
+  margin-bottom:12px;
+}
+.browse-heading .section-intro{margin:0;max-width:650px;font-size:.98rem}
+.browse-all{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#315d48;
+  font-weight:700;
+  font-size:.86rem;
+  text-decoration:none;
+  border-bottom:1px solid #b8c7b9;
+  padding-bottom:5px;
+  margin-bottom:4px;
+}
+.browse-all:hover{color:#b66c4d;border-color:#b66c4d}
+.popular-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:0;
+}
+.popular-grid a.popular-card{
+  min-height:94px;
+  grid-template-columns:44px minmax(0,1fr) 22px;
+  gap:13px;
+  padding:16px;
+  border-radius:9px;
+  border:1px solid #e1e5dd;
+  box-shadow:none;
+  background:#fff;
+}
+.popular-grid a.popular-card:hover{
+  transform:translateY(-2px);
+  border-color:#b4c8b8;
+  background:#fbfcfa;
+  box-shadow:0 6px 15px rgba(36,58,46,.06);
+}
+.popular-icon{
+  width:44px;height:44px;
+  border-radius:8px;
+  background:#edf2ec;
+  font-size:1.25rem;
+}
+.popular-card-copy strong{font-size:.88rem}
+.popular-card-copy small{font-size:.72rem}
+.popular-arrow{
+  width:22px;height:22px;
+  border:0;
+  color:#6b7b70;
+  font-size:1rem;
+}
+.popular-grid a.popular-card:hover .popular-arrow{
+  background:transparent;
+  color:#b66c4d;
+}
+.popular-footnote{margin-top:18px;font-size:.82rem}
+@media(max-width:900px){
+  .hero-inner{padding:56px 0 45px}
+  .popular-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .browse-heading{align-items:flex-start}
+}
+@media(max-width:520px){
+  .hero-inner{padding:48px 0 38px}
+  .hero h1{font-size:clamp(2.75rem,11vw,3.55rem)}
+  .hero-copy{font-size:.95rem;margin:20px 0}
+  .market-hero-notes{gap:10px 16px;font-size:.75rem;margin-top:20px}
+  .popular-grid{grid-template-columns:1fr;gap:9px}
+  .browse-heading{display:block;margin-bottom:23px}
+  .browse-heading h2{font-size:2.35rem}
+  .browse-heading .section-intro{font-size:.93rem}
+  .browse-all{margin-top:17px}
+}
