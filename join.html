@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Join the Pequlieer local service provider network in Cape Town. Register your service details through WhatsApp.">
+<meta name="theme-color" content="#203f36">
+<title>Join the Service Network | Pequlieer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="standalone-page">
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="Pequlieer home">PEQULIEER</a>
+    <nav aria-label="Main navigation"><a href="index.html#browse-services">Browse Services</a><a href="index.html#how">How It Works</a><a href="request.html">Request a Service</a></nav>
+    <a class="nav-cta" href="index.html">Back to Homepage</a>
+  </div>
+</header>
+<main class="standalone-main provider-standalone">
+  <div class="standalone-container">
+    <a class="standalone-back" href="index.html">← Back to homepage</a>
+    <div class="standalone-layout">
+      <div class="standalone-copy">
+        <p class="eyebrow">FOR SERVICE PROVIDERS</p>
+        <h1>Offer a service.<br><span>Grow your reach.</span></h1>
+        <p class="standalone-lead">Pequlieer is building a network of local service providers across Cape Town. Tell us what you do and where you work so we can understand the services you offer.</p>
+        <div class="standalone-points">
+          <div><span>01</span><p><strong>Introduce your service</strong><br>Tell us what you do and which areas you cover.</p></div>
+          <div><span>02</span><p><strong>Send your details</strong><br>Review the message in WhatsApp and press Send.</p></div>
+          <div><span>03</span><p><strong>We’ll keep your details in mind</strong><br>We may contact you when a suitable enquiry comes in.</p></div>
+        </div>
+        <p class="standalone-note">Joining the network does not guarantee customer leads or paid work. The website does not currently save registrations automatically.</p>
+      </div>
+      <form class="standalone-form" id="provider-registration-form">
+        <div class="standalone-form-heading"><p class="eyebrow">PROVIDER REGISTRATION</p><h2>Tell us about your service</h2><p>Fields marked with * are required.</p></div>
+        <label for="provider-name">Your name *</label>
+        <input id="provider-name" name="Name" type="text" placeholder="Your full name" autocomplete="name" required>
+        <label for="provider-business">Business name <span>(optional)</span></label>
+        <input id="provider-business" name="Business name" type="text" placeholder="Your business name">
+        <label for="provider-phone">WhatsApp / phone number *</label>
+        <input id="provider-phone" name="Phone" type="tel" placeholder="Your contact number" autocomplete="tel" required>
+        <label for="provider-service">Main service category *</label>
+        <select id="provider-service" name="Service category" required>
+          <option value="">Choose a category</option>
+          <option>Home & Property</option>
+          <option>Repairs & Metalwork</option>
+          <option>Moving & Physical Help</option>
+          <option>Education & Tutoring</option>
+          <option>Digital & Technology</option>
+          <option>Family & Childcare</option>
+          <option>Events & Catering</option>
+          <option>Tourism & Visitors</option>
+          <option>Something Else</option>
+        </select>
+        <label for="provider-specific">Specific service *</label>
+        <input id="provider-specific" name="Specific service" type="text" placeholder="e.g. plumbing, tutoring, catering" required>
+        <label for="provider-area">Areas you serve *</label>
+        <input id="provider-area" name="Service areas" type="text" placeholder="e.g. Bellville, Parow, Cape Town" required>
+        <label for="provider-experience">Experience or qualifications <span>(optional)</span></label>
+        <textarea id="provider-experience" name="Experience or qualifications" rows="4" placeholder="Briefly describe your experience, qualifications, or business"></textarea>
+        <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
+        <p class="form-note">Your details are not saved on this website. WhatsApp will open with a prepared message; please review it and press Send.</p>
+        <p id="provider-form-status" class="standalone-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="standalone-footer">
+  <div class="standalone-container"><a class="brand footer-brand" href="index.html">PEQULIEER</a><p>You need it. We connect it.</p><p><a href="https://wa.me/27681226185" target="_blank" rel="noopener">WhatsApp: 068 122 6185</a></p><a href="index.html">Back to homepage</a></div>
+</footer>
+<script>
+(function(){
+  const form = document.getElementById("provider-registration-form");
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    if(!form.reportValidity()) return;
+    const fields = [
+      ["Name", document.getElementById("provider-name").value.trim()],
+      ["Business name", document.getElementById("provider-business").value.trim()],
+      ["Phone / WhatsApp", document.getElementById("provider-phone").value.trim()],
+      ["Service category", document.getElementById("provider-service").value],
+      ["Specific service", document.getElementById("provider-specific").value.trim()],
+      ["Service areas", document.getElementById("provider-area").value.trim()],
+      ["Experience or qualifications", document.getElementById("provider-experience").value.trim()]
+    ];
+    const message = "Hi Pequlieer, I’d like to join the local service provider network.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
+    const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+    document.getElementById("provider-form-status").textContent = "WhatsApp should open in a new tab with your registration ready. Please press Send there to submit your details.";
+  });
+})();
+</script>
+</body>
+</html>
