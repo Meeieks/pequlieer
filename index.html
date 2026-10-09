@@ -125,7 +125,9 @@
   const searchParams = new URLSearchParams(window.location.search);
   let currentSearchTerm = searchParams.get("q") || "";
 
-  function clean(value){ return (value || "").toLowerCase().replace(/[^a-z0-9\\s&-]/g," ").replace(/\\s+/g," ").trim(); }
+  function clean(value){
+    return (value || "").toLowerCase().replace(/[^a-z0-9\s&-]/g," ").replace(/\s+/g," ").trim();
+  }
   function applyCategorySearch(term, shouldScroll){
     currentSearchTerm = term.trim();
     if(!currentSearchTerm){
@@ -136,15 +138,20 @@
       let matched = 0;
       categoryCards.forEach(card => {
         const haystack = clean((card.dataset.keywords || "") + " " + card.innerText + " " + (card.dataset.service || ""));
-        const isMatch = tokens.some(token => haystack.includes(token)) || haystack.includes(clean(currentSearchTerm));
+        const isMatch = tokens.some(token => haystack.includes(token));
         card.hidden = !isMatch;
         if(isMatch) matched++;
       });
       if(categoryStatus){
         categoryStatus.hidden = false;
-        categoryStatus.textContent = matched
-          ? "Showing " + matched + " " + (matched === 1 ? "category" : "categories") + " related to “" + currentSearchTerm + "”. Choose a category to continue."
-          : "We couldn’t match “" + currentSearchTerm + "” to one category, so all categories are shown. Choose the closest fit or select Something Else.";
+        if(matched){
+          categoryStatus.textContent = "Showing " + matched + " " + (matched === 1 ? "category" : "categories") + " related to “" + currentSearchTerm + "”. Choose a category to continue.";
+        }else{
+          categoryCards.forEach(card => card.hidden = false);
+          categoryStatus.textContent = "We couldn’t match “" + currentSearchTerm + "” to one category, so all categories are shown. Choose the closest fit or select Something Else.";
+        }
+      }else if(!matched){
+        categoryCards.forEach(card => card.hidden = false);
       }
     }
     if(searchInput) searchInput.value = currentSearchTerm;
