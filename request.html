@@ -80,18 +80,22 @@
 (function(){
   const params = new URLSearchParams(window.location.search);
   const service = params.get("service") || "";
+  const specific = params.get("specific") || "";
   const search = params.get("search") || "";
   const initialRequest = params.get("request") || "";
   const serviceField = document.getElementById("customer-service");
+  const specificField = document.getElementById("customer-specific");
   const detailField = document.getElementById("customer-details");
   if(service && serviceField){
     const match = Array.from(serviceField.options).find(option => option.value.toLowerCase() === service.toLowerCase() || option.text.toLowerCase() === service.toLowerCase());
     if(match) serviceField.value = match.value;
   }
+  if(specificField && specific) specificField.value = specific;
   if(detailField){
     if(initialRequest && search) detailField.value = initialRequest + "\n\nMore specifically, I’m looking for: " + search;
     else if(initialRequest) detailField.value = initialRequest;
     else if(search) detailField.value = "I’m looking for: " + search;
+    else if(specific && service) detailField.value = "I’m looking for " + specific + " under " + service + ".";
     else if(service) detailField.value = "I’d like help finding a service in the " + service + " category.";
   }
   document.getElementById("customer-request-form").addEventListener("submit", function(event){
