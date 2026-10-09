@@ -982,6 +982,8 @@ textarea::placeholder{
   color:inherit;
   font:inherit;
   text-align:left;
+  text-decoration:none;
+  cursor:pointer;
 }
 .category-card.service-card:focus-visible{
   outline:3px solid #203f36;
