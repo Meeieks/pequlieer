@@ -23,6 +23,7 @@
 <div class="hero-kicker">ONE PLACE <span>•</span> MANY POSSIBILITIES</div>
 <h1>Need It?<br><span>We'll Connect You.</span></h1>
 <p class="hero-copy">Looking for someone you can trust? Tell us what you need and we'll help connect you with the right local service.</p>
+<form class="service-search" id="service-search" role="search"><label class="visually-hidden" for="service-search-input">What service do you need?</label><input id="service-search-input" type="search" placeholder="e.g. plumber, tutor, handyman..." autocomplete="off"><button type="submit">Find Help <span>→</span></button></form>
 <div class="hero-actions"><a class="button primary" href="#enquiry">Tell Us What You Need <span>→</span></a><a class="button whatsapp-button" href="https://wa.me/27681226185?text=Hi%20Pequlieer%2C%20I%20need%20help%20finding%20a%20service." target="_blank" rel="noopener">WhatsApp Us</a></div>
 <div class="hero-photo-strip" aria-label="Examples of services Pequlieer can help connect"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Handyman working on a home repair" loading="eager"><img src="https://unsplash.com/photos/HrnAxAUwle8/download?force=true" alt="People moving furniture" loading="eager"><img src="https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?auto=format&fit=crop&w=1200&q=85" alt="People exploring a city destination" loading="eager"></div>
 </div></section>
@@ -83,7 +84,8 @@
 <a class="whatsapp-float" href="https://wa.me/27681226185?text=Hi%20Pequlieer%2C%20I%20need%20help%20with%20a%20service." target="_blank" rel="noopener" aria-label="Chat with Pequlieer on WhatsApp">Chat with Pequlieer</a>
 <script>
 (function(){
-const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),serviceSelect=document.getElementById("service-select");
+const cards=document.querySelectorAll(".service-card"),request=document.getElementById("request"),serviceSelect=document.getElementById("service-select"),searchForm=document.getElementById("service-search"),searchInput=document.getElementById("service-search-input");
+if(searchForm&&searchInput){searchForm.addEventListener("submit",e=>{e.preventDefault();const term=searchInput.value.trim();if(!term){searchInput.focus();return;}addRequest("I'm looking for: "+term);document.getElementById("enquiry").scrollIntoView({behavior:"smooth",block:"start"});if(request)request.focus();});}
 function addRequest(text,service){if(!request)return;request.value=(request.value.trim()?request.value+"\n\n":"")+text;if(service&&serviceSelect)serviceSelect.value=service;}
 cards.forEach(card=>{card.tabIndex=0;const choose=()=>{const service=card.dataset.service;addRequest("Service: "+service+"\n\n",service);document.getElementById("enquiry").scrollIntoView({behavior:"smooth",block:"start"});request.focus();};card.addEventListener("click",choose);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();choose();}});});
 if(serviceSelect)serviceSelect.addEventListener("change",()=>{if(serviceSelect.value)addRequest("Service: "+serviceSelect.value+"\n\n",serviceSelect.value);});
