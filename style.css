@@ -815,27 +815,3 @@ section[id]{scroll-margin-top:92px}
   .category-service-link{min-height:48px;padding:12px;font-size:.83rem}
 }
 
-
-/* Brand identity for printing, corporate gifts and promotional products */
-.category-card-branding{
-  background:linear-gradient(135deg,#315d63 0%,#42796f 48%,#b66c4d 100%);
-}
-.category-card-branding:after{
-  background:linear-gradient(to top,rgba(16,35,35,.88) 0%,rgba(16,35,35,.35) 62%,rgba(16,35,35,.06) 100%);
-}
-.category-card-branding .other-pattern{
-  color:rgba(255,255,255,.24);
-}
-.category-card-branding .other-pattern span:nth-child(2){
-  color:rgba(238,214,164,.65);
-}
-.category-card-branding .category-overlay h3{
-  font-size:clamp(1.25rem,1.8vw,1.7rem);
-}
-@media(max-width:900px){
-  .category-card-branding .category-overlay h3{font-size:clamp(1.2rem,2.8vw,1.55rem)}
-}
-@media(max-width:520px){
-  .category-card-branding .category-overlay h3{font-size:.96rem;line-height:1.08}
-  .category-card-branding .category-overlay p{font-size:.61rem;line-height:1.35}
-}
