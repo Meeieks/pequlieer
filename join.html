@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="standalone-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="nav">
     <a class="brand" href="index.html" aria-label="Pequlieer home">PEQULIEER</a>
@@ -16,7 +17,7 @@
     <a class="nav-cta" href="index.html">Back to Homepage</a>
   </div>
 </header>
-<main class="standalone-main provider-standalone">
+<main id="main-content" class="standalone-main provider-standalone" tabindex="-1">
   <div class="standalone-container">
     <a class="standalone-back" href="index.html">← Back to homepage</a>
     <div class="standalone-layout">
@@ -31,8 +32,8 @@
         </div>
         <p class="standalone-note">We welcome service providers across Cape Town. Share your details so we can learn more about the services you offer.</p>
       </div>
-      <form class="standalone-form" id="provider-registration-form">
-        <div class="standalone-form-heading"><p class="eyebrow">PROVIDER REGISTRATION</p><h2>Tell us about your service</h2><p>Share the details customers would need to understand what you offer.</p></div>
+      <form class="standalone-form" id="provider-registration-form" aria-labelledby="provider-form-title" aria-describedby="provider-required-note">
+        <div class="standalone-form-heading"><p class="eyebrow">PROVIDER REGISTRATION</p><h2 id="provider-form-title">Tell us about your service</h2><p>Share the details customers would need to understand what you offer.</p><p class="form-required-note" id="provider-required-note">Fields marked * are required. Your browser will explain if a required field needs attention.</p></div>
         <label for="provider-name">Your name *</label>
         <input id="provider-name" name="Name" type="text" placeholder="Your full name" autocomplete="name" required>
         <label for="provider-business">Business name <span>(optional)</span></label>
@@ -68,7 +69,7 @@
         <textarea id="provider-experience" name="Experience or qualifications" rows="4" placeholder="Briefly describe your experience, qualifications, or business"></textarea>
         <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
         <p class="form-note">Your registration details will be prepared in WhatsApp for you to review and send to Pequlieer.</p>
-        <p id="provider-form-status" class="standalone-status" aria-live="polite"></p>
+        <p id="provider-form-status" class="standalone-status" aria-live="polite" aria-atomic="true"></p>
       </form>
     </div>
   </div>
