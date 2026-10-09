@@ -171,3 +171,93 @@ footer{background:#192f29;padding:58px 0 22px}
   .footer-grid{grid-template-columns:1fr}
   .whatsapp-float{right:12px;bottom:12px;padding:10px 13px}
 }
+
+
+/* Refined quick-start service cards */
+.popular .section-intro{max-width:660px;margin-bottom:0}
+.popular-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:34px;
+}
+.popular-grid a.popular-card{
+  min-width:0;
+  min-height:112px;
+  display:grid;
+  grid-template-columns:46px minmax(0,1fr) 26px;
+  align-items:center;
+  gap:12px;
+  padding:17px 15px;
+  background:#fff;
+  border:1px solid #e5e4dc;
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--ink);
+  box-shadow:0 4px 14px rgba(29,48,39,.035);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.popular-grid a.popular-card:hover{
+  transform:translateY(-3px);
+  border-color:#c9b58e;
+  box-shadow:0 12px 25px rgba(29,48,39,.08);
+}
+.popular-icon{
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:#f1eee5;
+  font-size:1.35rem;
+}
+.popular-card-copy{display:block;min-width:0}
+.popular-card-copy strong{
+  display:block;
+  color:var(--dark);
+  font-size:.9rem;
+  line-height:1.3;
+  font-weight:700;
+}
+.popular-card-copy small{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:.72rem;
+  line-height:1.45;
+  font-weight:400;
+}
+.popular-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:26px;
+  height:26px;
+  border:1px solid #e6e4dc;
+  border-radius:50%;
+  color:var(--accent);
+  font-size:.9rem;
+  line-height:1;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.popular-grid a.popular-card:hover .popular-arrow{
+  background:var(--dark);
+  border-color:var(--dark);
+  color:#fff;
+}
+.popular-footnote{
+  margin:22px 0 0;
+  font-size:.85rem;
+  color:var(--muted);
+}
+@media(max-width:900px){
+  .popular-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .popular-grid{grid-template-columns:1fr;gap:10px;margin-top:26px}
+  .popular-grid a.popular-card{min-height:88px;padding:14px}
+  .popular-icon{width:42px;height:42px}
+  .popular-card-copy strong{font-size:.88rem}
+  .popular-card-copy small{font-size:.73rem}
+}
