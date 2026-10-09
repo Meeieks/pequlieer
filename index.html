@@ -80,7 +80,7 @@
   </div>
   <section class="category-services-panel" id="category-services-panel" aria-labelledby="category-services-title" hidden>
     <div class="category-services-heading">
-      <div><p class="eyebrow">CHOOSE A SERVICE</p><h3 id="category-services-title">Services in this category</h3><p id="category-services-description">Choose the service that best matches what you need.</p></div>
+      <div><p class="eyebrow">CHOOSE A SERVICE</p><h3 id="category-services-title" tabindex="-1">Services in this category</h3><p id="category-services-description">Choose the service that best matches what you need.</p></div>
       <button class="category-services-close" id="category-services-close" type="button" aria-label="Close service list">×</button>
     </div>
     <div class="category-service-links" id="category-service-links"></div>
@@ -285,6 +285,7 @@
       if(searchInput){searchInput.value = ""; }
       currentSearchTerm = "";
       showCategoryServices(category,false);
+      if(categoryPanelTitle) categoryPanelTitle.focus({preventScroll:true});
       if(categoryPanel) setTimeout(function(){categoryPanel.scrollIntoView({behavior:"smooth",block:"nearest"});},80);
     };
     card.addEventListener("click",choose);
