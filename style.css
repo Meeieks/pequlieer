@@ -136,8 +136,8 @@ footer{background:#192f29;padding:58px 0 22px}
 .footer-grid p{line-height:1.7}
 .footer-grid a{text-decoration:none}
 .footer-grid a:hover{color:#e3c48c}
-.whatsapp-float{background:#218c51;border-radius:10px;box-shadow:0 7px 20px rgba(0,0,0,.17)}
-.whatsapp-float:hover{background:#1b7745}
+.whatsapp-float{background:#1b7745;border-radius:10px;box-shadow:0 7px 20px rgba(0,0,0,.17)}
+.whatsapp-float:hover{background:#155e36}
 :focus-visible{outline:3px solid #c9a86b;outline-offset:3px}
 @media(max-width:900px){
   .hero-inner{padding:68px 0 52px}
