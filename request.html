@@ -32,7 +32,16 @@
         <p class="standalone-note">Pequlieer is building its local provider network. Availability is not guaranteed, and service prices and arrangements are confirmed with the provider.</p>
       </div>
       <form class="standalone-form" id="customer-request-form">
-        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2>What can we help with?</h2><p>Fields marked with * are required.</p></div>
+        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2>What can we help with?</h2><p>Tell us a few details so we can understand your request.</p></div>
+        <div class="request-selection-summary" id="request-selection-summary" aria-live="polite">
+          <span class="request-selection-icon" aria-hidden="true">✓</span>
+          <div class="request-selection-copy">
+            <p id="request-selection-label">YOUR SELECTION</p>
+            <strong id="request-selection-title">Choose a service category</strong>
+            <span id="request-selection-description">Your selected service will appear here.</span>
+          </div>
+          <a href="index.html#browse-services" class="request-change-link">Change</a>
+        </div>
         <label for="customer-name">Your name *</label>
         <input id="customer-name" name="Name" type="text" placeholder="Enter your name" autocomplete="name" required>
         <label for="customer-phone">WhatsApp / phone number *</label>
@@ -67,7 +76,7 @@
         <label for="customer-details">Tell us a little more *</label>
         <textarea id="customer-details" name="Request details" rows="5" placeholder="Describe what you need, the job, or the problem..." required></textarea>
         <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
-        <p class="form-note">Your details are not saved on this website. WhatsApp will open with a prepared message; please review it and press Send.</p>
+        <p class="form-note">When you continue, WhatsApp opens with your enquiry ready to review and send.</p>
         <p id="customer-form-status" class="standalone-status" aria-live="polite"></p>
       </form>
     </div>
@@ -86,11 +95,39 @@
   const serviceField = document.getElementById("customer-service");
   const specificField = document.getElementById("customer-specific");
   const detailField = document.getElementById("customer-details");
+  const summaryTitle = document.getElementById("request-selection-title");
+  const summaryDescription = document.getElementById("request-selection-description");
+  const summaryLabel = document.getElementById("request-selection-label");
+  const summary = document.getElementById("request-selection-summary");
+
+  function updateSelectionSummary(){
+    const selectedCategory = serviceField.value.trim();
+    const selectedSpecific = specificField.value.trim();
+    if(selectedCategory || selectedSpecific){
+      summaryLabel.textContent = "YOUR SELECTION";
+      summaryTitle.textContent = selectedSpecific || selectedCategory;
+      summaryDescription.textContent = selectedSpecific && selectedCategory
+        ? selectedCategory + " · Your request details are below."
+        : "Complete the details below to continue.";
+      summary.classList.add("has-selection");
+    }else{
+      summaryLabel.textContent = "STEP 1";
+      summaryTitle.textContent = "Choose a service category";
+      summaryDescription.textContent = "Select a category below, then tell us what you need.";
+      summary.classList.remove("has-selection");
+    }
+  }
+
   if(service && serviceField){
-    const match = Array.from(serviceField.options).find(option => option.value.toLowerCase() === service.toLowerCase() || option.text.toLowerCase() === service.toLowerCase());
+    const match = Array.from(serviceField.options).find(option =>
+      option.value.toLowerCase() === service.toLowerCase() ||
+      option.text.toLowerCase() === service.toLowerCase()
+    );
     if(match) serviceField.value = match.value;
   }
+
   if(specificField && specific) specificField.value = specific;
+
   if(detailField){
     if(initialRequest && search) detailField.value = initialRequest + "\n\nMore specifically, I’m looking for: " + search;
     else if(initialRequest) detailField.value = initialRequest;
@@ -98,6 +135,11 @@
     else if(specific && service) detailField.value = "I’m looking for " + specific + " under " + service + ".";
     else if(service) detailField.value = "I’d like help finding a service in the " + service + " category.";
   }
+
+  updateSelectionSummary();
+  serviceField.addEventListener("change",updateSelectionSummary);
+  specificField.addEventListener("input",updateSelectionSummary);
+
   document.getElementById("customer-request-form").addEventListener("submit", function(event){
     event.preventDefault();
     const form = event.currentTarget;
@@ -108,14 +150,14 @@
       ["Email", document.getElementById("customer-email").value.trim()],
       ["Area", document.getElementById("customer-area").value.trim()],
       ["Service category", serviceField.value],
-      ["Specific service", document.getElementById("customer-specific").value.trim()],
+      ["Specific service", specificField.value.trim()],
       ["When needed", document.getElementById("customer-when").value],
       ["Request details", detailField.value.trim()]
     ];
     const message = "Hi Pequlieer, I’d like help finding a service.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
     const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
     window.open(url, "_blank", "noopener,noreferrer");
-    document.getElementById("customer-form-status").textContent = "WhatsApp should open in a new tab with your message ready. Please press Send there to submit your enquiry.";
+    document.getElementById("customer-form-status").textContent = "WhatsApp is opening with your enquiry. Please check the details and press Send to submit it to Pequlieer.";
   });
 })();
 </script>
