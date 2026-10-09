@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tell Pequlieer what local service you need in Cape Town. Submit your enquiry through WhatsApp.">
+<meta name="theme-color" content="#203f36">
+<title>Request a Service | Pequlieer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="standalone-page">
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="Pequlieer home">PEQULIEER</a>
+    <nav aria-label="Main navigation"><a href="index.html#browse-services">Browse Services</a><a href="index.html#how">How It Works</a><a href="join.html">For Providers</a></nav>
+    <a class="nav-cta" href="index.html#browse-services">Browse Categories</a>
+  </div>
+</header>
+<main class="standalone-main">
+  <div class="standalone-container">
+    <a class="standalone-back" href="index.html#browse-services">← Back to service categories</a>
+    <div class="standalone-layout">
+      <div class="standalone-copy">
+        <p class="eyebrow">CUSTOMER ENQUIRY</p>
+        <h1>Tell us what<br><span>you need.</span></h1>
+        <p class="standalone-lead">Share a few details about the service you’re looking for. Pequlieer will use your enquiry to understand what you need and help you find a suitable local connection.</p>
+        <div class="standalone-points">
+          <div><span>01</span><p><strong>Tell us the basics</strong><br>Choose a category and describe the job.</p></div>
+          <div><span>02</span><p><strong>Review your message</strong><br>We’ll prepare the details in WhatsApp.</p></div>
+          <div><span>03</span><p><strong>Send it to Pequlieer</strong><br>Tap Send in WhatsApp to complete your enquiry.</p></div>
+        </div>
+        <p class="standalone-note">Pequlieer is building its local provider network. Availability is not guaranteed, and service prices and arrangements are confirmed with the provider.</p>
+      </div>
+      <form class="standalone-form" id="customer-request-form">
+        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2>What can we help with?</h2><p>Fields marked with * are required.</p></div>
+        <label for="customer-name">Your name *</label>
+        <input id="customer-name" name="Name" type="text" placeholder="Enter your name" autocomplete="name" required>
+        <label for="customer-phone">WhatsApp / phone number *</label>
+        <input id="customer-phone" name="Phone" type="tel" placeholder="e.g. 071 234 5678" autocomplete="tel" required>
+        <label for="customer-email">Email address <span>(optional)</span></label>
+        <input id="customer-email" name="Email" type="email" placeholder="you@example.com" autocomplete="email">
+        <label for="customer-area">Your area in or around Cape Town *</label>
+        <input id="customer-area" name="Area" type="text" placeholder="e.g. Bellville, Parow, Claremont" autocomplete="address-level2" required>
+        <label for="customer-service">Service category *</label>
+        <select id="customer-service" name="Service category" required>
+          <option value="">Choose a category</option>
+          <option>Home & Property</option>
+          <option>Repairs & Metalwork</option>
+          <option>Moving & Physical Help</option>
+          <option>Education & Tutoring</option>
+          <option>Digital & Technology</option>
+          <option>Family & Childcare</option>
+          <option>Events & Catering</option>
+          <option>Tourism & Visitors</option>
+          <option>Something Else</option>
+        </select>
+        <label for="customer-specific">Specific service <span>(if known)</span></label>
+        <input id="customer-specific" name="Specific service" type="text" placeholder="e.g. plumber, house cleaning, maths tutor">
+        <label for="customer-when">When do you need it?</label>
+        <select id="customer-when" name="When needed">
+          <option value="">Choose timing (optional)</option>
+          <option>As soon as possible</option>
+          <option>Within a few days</option>
+          <option>Within the next few weeks</option>
+          <option>Just planning / no fixed date</option>
+        </select>
+        <label for="customer-details">Tell us a little more *</label>
+        <textarea id="customer-details" name="Request details" rows="5" placeholder="Describe what you need, the job, or the problem..." required></textarea>
+        <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
+        <p class="form-note">Your details are not saved on this website. WhatsApp will open with a prepared message; please review it and press Send.</p>
+        <p id="customer-form-status" class="standalone-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="standalone-footer">
+  <div class="standalone-container"><a class="brand footer-brand" href="index.html">PEQULIEER</a><p>You need it. We connect it.</p><p><a href="https://wa.me/27681226185" target="_blank" rel="noopener">WhatsApp: 068 122 6185</a></p><a href="index.html">Back to homepage</a></div>
+</footer>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get("service") || "";
+  const search = params.get("search") || "";
+  const initialRequest = params.get("request") || "";
+  const serviceField = document.getElementById("customer-service");
+  const detailField = document.getElementById("customer-details");
+  if(service && serviceField){
+    const match = Array.from(serviceField.options).find(option => option.value.toLowerCase() === service.toLowerCase() || option.text.toLowerCase() === service.toLowerCase());
+    if(match) serviceField.value = match.value;
+  }
+  if(detailField){
+    if(initialRequest && search) detailField.value = initialRequest + "\n\nMore specifically, I’m looking for: " + search;
+    else if(initialRequest) detailField.value = initialRequest;
+    else if(search) detailField.value = "I’m looking for: " + search;
+    else if(service) detailField.value = "I’d like help finding a service in the " + service + " category.";
+  }
+  document.getElementById("customer-request-form").addEventListener("submit", function(event){
+    event.preventDefault();
+    const form = event.currentTarget;
+    if(!form.reportValidity()) return;
+    const fields = [
+      ["Name", document.getElementById("customer-name").value.trim()],
+      ["Phone / WhatsApp", document.getElementById("customer-phone").value.trim()],
+      ["Email", document.getElementById("customer-email").value.trim()],
+      ["Area", document.getElementById("customer-area").value.trim()],
+      ["Service category", serviceField.value],
+      ["Specific service", document.getElementById("customer-specific").value.trim()],
+      ["When needed", document.getElementById("customer-when").value],
+      ["Request details", detailField.value.trim()]
+    ];
+    const message = "Hi Pequlieer, I’d like help finding a service.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
+    const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+    document.getElementById("customer-form-status").textContent = "WhatsApp should open in a new tab with your message ready. Please press Send there to submit your enquiry.";
+  });
+})();
+</script>
+</body>
+</html>
