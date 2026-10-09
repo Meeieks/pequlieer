@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="floating-shape shape-one" aria-hidden="true"></div>
 <div class="floating-shape shape-two" aria-hidden="true"></div>
 <header class="site-header">
@@ -18,7 +19,7 @@
     <a class="nav-cta" href="#browse-services">Find a Service</a>
   </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section id="home" class="hero"><div class="hero-inner market-hero-layout">
   <div class="market-hero-copy">
     <div class="hero-kicker">LOCAL SERVICES <span>•</span> CAPE TOWN</div>
@@ -101,15 +102,15 @@
 </div></div></section>
 
 <section id="services" class="section services"><div class="wide"><p class="eyebrow">SERVICES</p><h2>What do you need help with?</h2><p class="section-intro">Choose a category or simply tell us what you need. If it isn't listed, ask us anyway.</p><div class="category-grid">
-<article class="category-card service-card" data-service="Home & Property"><img src="https://giftedhandforlife.co.za/assets/project-handyman-kuilsriver-BdO1Ojf8.jpg" alt="Home maintenance and handyman work" loading="lazy"><div class="category-overlay"><span>01</span><h3>Home & Property</h3><p>Handyman · Cleaning · Gardening · Maintenance</p></div></article>
-<article class="category-card service-card" data-service="Repairs & Metalwork"><img src="https://www.laserlightica.pl/images/service-welding.jpg" alt="Welding and metalwork" loading="lazy"><div class="category-overlay"><span>02</span><h3>Repairs & Metalwork</h3><p>Repairs · Welding · Fabrication · Maintenance</p></div></article>
-<article class="category-card service-card" data-service="Moving & Physical Help"><img src="https://cdn.wisemove.co.za/image/resource/3879351bd16aafb658e7f96da31235e2.webp" alt="Moving and physical help" loading="lazy"><div class="category-overlay"><span>03</span><h3>Moving & Physical Help</h3><p>Moving · Loading · Deliveries · Labour</p></div></article>
-<article class="category-card service-card" data-service="Education & Tutoring"><img src="https://estatic.languagecourse.net/images/schools/thumbs_school_page_slider/study--live-in-your-teachers-home-cape-town_159679023124.jpg" alt="Education and tutoring" loading="lazy"><div class="category-overlay"><span>04</span><h3>Education & Tutoring</h3><p>Tutors · Homework · Study Support · Lessons</p></div></article>
-<article class="category-card service-card" data-service="Digital & Technology"><img src="https://icts.uct.ac.za/sites/default/files/styles/slide_full_width/public/content_migration/icts_uct_ac_za/66/images/SPO_3862_rs.jpg?h=f615675f&itok=udaHmTLx" alt="Digital and technology support" loading="lazy"><div class="category-overlay"><span>05</span><h3>Digital & Technology</h3><p>Websites · Computers · Tech Support · Digital Help</p></div></article>
-<article class="category-card service-card" data-service="Family & Childcare"><img src="https://cdn.babysits.com/users/7/f/a/5903540/babysitter-job-5903540-1716623092-rc-w650-h650.jpg" alt="Family and childcare" loading="lazy"><div class="category-overlay"><span>06</span><h3>Family & Childcare</h3><p>Childcare · Babysitting · Family Support</p></div></article>
-<article class="category-card service-card" data-service="Events & Catering"><img src="https://media.venturescapes.co.za/venturescapes/venturescapes/cape_town_stadium/77578/_DSC4019.1600_0_1.jpg" alt="Events and catering" loading="lazy"><div class="category-overlay"><span>07</span><h3>Events & Catering</h3><p>Catering · Parties · Setup · Event Support</p></div></article>
-<article class="category-card service-card" data-service="Tourism & Visitors"><img src="https://app.advcollective.com/_next/image?q=75&url=https%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fattractions-splice-spp-720x480%2F15%2F0e%2F4e%2F6e.jpg&w=3840" alt="Tourism and visitors in Cape Town" loading="lazy"><div class="category-overlay"><span>08</span><h3>Tourism & Visitors</h3><p>Local Help · Experiences · Visitor Support</p></div></article>
-<article class="category-card category-card-other service-card" data-service="Something Else"><div class="other-pattern" aria-hidden="true"><span>?</span><span>✦</span><span>+</span></div><div class="category-overlay"><span>09</span><h3>Something Else</h3><p>Can't find what you need? Tell us anyway.</p></div></article>
+<button type="button" class="category-card service-card" data-service="Home & Property" aria-label="Browse Home & Property services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://giftedhandforlife.co.za/assets/project-handyman-kuilsriver-BdO1Ojf8.jpg" alt="Home maintenance and handyman work" loading="lazy"><div class="category-overlay"><span>01</span><h3>Home & Property</h3><p>Handyman · Cleaning · Gardening · Maintenance</p></div></button>
+<button type="button" class="category-card service-card" data-service="Repairs & Metalwork" aria-label="Browse Repairs & Metalwork services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://www.laserlightica.pl/images/service-welding.jpg" alt="Welding and metalwork" loading="lazy"><div class="category-overlay"><span>02</span><h3>Repairs & Metalwork</h3><p>Repairs · Welding · Fabrication · Maintenance</p></div></button>
+<button type="button" class="category-card service-card" data-service="Moving & Physical Help" aria-label="Browse Moving & Physical Help services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://cdn.wisemove.co.za/image/resource/3879351bd16aafb658e7f96da31235e2.webp" alt="Moving and physical help" loading="lazy"><div class="category-overlay"><span>03</span><h3>Moving & Physical Help</h3><p>Moving · Loading · Deliveries · Labour</p></div></button>
+<button type="button" class="category-card service-card" data-service="Education & Tutoring" aria-label="Browse Education & Tutoring services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://estatic.languagecourse.net/images/schools/thumbs_school_page_slider/study--live-in-your-teachers-home-cape-town_159679023124.jpg" alt="Education and tutoring" loading="lazy"><div class="category-overlay"><span>04</span><h3>Education & Tutoring</h3><p>Tutors · Homework · Study Support · Lessons</p></div></button>
+<button type="button" class="category-card service-card" data-service="Digital & Technology" aria-label="Browse Digital & Technology services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://icts.uct.ac.za/sites/default/files/styles/slide_full_width/public/content_migration/icts_uct_ac_za/66/images/SPO_3862_rs.jpg?h=f615675f&itok=udaHmTLx" alt="Digital and technology support" loading="lazy"><div class="category-overlay"><span>05</span><h3>Digital & Technology</h3><p>Websites · Computers · Tech Support · Digital Help</p></div></button>
+<button type="button" class="category-card service-card" data-service="Family & Childcare" aria-label="Browse Family & Childcare services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://cdn.babysits.com/users/7/f/a/5903540/babysitter-job-5903540-1716623092-rc-w650-h650.jpg" alt="Family and childcare" loading="lazy"><div class="category-overlay"><span>06</span><h3>Family & Childcare</h3><p>Childcare · Babysitting · Family Support</p></div></button>
+<button type="button" class="category-card service-card" data-service="Events & Catering" aria-label="Browse Events & Catering services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://media.venturescapes.co.za/venturescapes/venturescapes/cape_town_stadium/77578/_DSC4019.1600_0_1.jpg" alt="Events and catering" loading="lazy"><div class="category-overlay"><span>07</span><h3>Events & Catering</h3><p>Catering · Parties · Setup · Event Support</p></div></button>
+<button type="button" class="category-card service-card" data-service="Tourism & Visitors" aria-label="Browse Tourism & Visitors services" aria-controls="category-services-panel" aria-expanded="false"><img src="https://app.advcollective.com/_next/image?q=75&url=https%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fattractions-splice-spp-720x480%2F15%2F0e%2F4e%2F6e.jpg&w=3840" alt="Tourism and visitors in Cape Town" loading="lazy"><div class="category-overlay"><span>08</span><h3>Tourism & Visitors</h3><p>Local Help · Experiences · Visitor Support</p></div></button>
+<button type="button" class="category-card service-card" data-service="Something Else" aria-label="Browse Something Else services" aria-controls="category-services-panel" aria-expanded="false"><div class="other-pattern" aria-hidden="true"><span>?</span><span>✦</span><span>+</span></div><div class="category-overlay"><span>09</span><h3>Something Else</h3><p>Can't find what you need? Tell us anyway.</p></div></button>
 </div></div></section>
 
 <section class="after-enquiry section"><div class="wide"><p class="eyebrow">AFTER YOU ENQUIRE</p><h2>What happens next?</h2><div class="after-grid"><article><span>01</span><h3>We review your request</h3><p>We look at what you need and contact you if we need more information.</p></article><article><span>02</span><h3>We look for a suitable connection</h3><p>We search our network for someone who may be able to help.</p></article><article><span>03</span><h3>We connect you</h3><p>We help you move to the next step and discuss the service details.</p></article></div></div></section>
@@ -210,6 +211,9 @@
       const arrow = card.querySelector(".popular-arrow");
       if(arrow) arrow.textContent = active ? "−" : "＋";
     });
+    document.querySelectorAll(".service-card").forEach(card => {
+      card.setAttribute("aria-expanded",card.dataset.service === category ? "true" : "false");
+    });
     categoryPanelTitle.textContent = category;
     categoryPanelDescription.textContent = "Choose a service below. The next page will open with your selection already filled in.";
     categoryServiceLinks.innerHTML = "";
@@ -237,6 +241,7 @@
       const arrow = card.querySelector(".popular-arrow");
       if(arrow) arrow.textContent = "＋";
     });
+    document.querySelectorAll(".service-card").forEach(card => card.setAttribute("aria-expanded","false"));
   }
 
   if(searchForm && searchInput){
@@ -271,7 +276,6 @@
   if(closePanelButton) closePanelButton.addEventListener("click",closeCategoryServices);
 
   document.querySelectorAll(".service-card").forEach(card => {
-    card.tabIndex = 0;
     const choose = function(){
       const category = card.dataset.service;
       const browse = document.getElementById("browse-services");
@@ -284,9 +288,6 @@
       if(categoryPanel) setTimeout(function(){categoryPanel.scrollIntoView({behavior:"smooth",block:"nearest"});},80);
     };
     card.addEventListener("click",choose);
-    card.addEventListener("keydown",function(event){
-      if(event.key === "Enter" || event.key === " "){event.preventDefault();choose();}
-    });
   });
 
   if(currentSearchTerm){
