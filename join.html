@@ -104,8 +104,8 @@
   }
 
   serviceField.addEventListener("change",updateProviderSummary);
-  specificField.addEventListener("input",updateProviderSummary);
-  areaField.addEventListener("input",updateProviderSummary);
+  specificField.addEventListener("change",updateProviderSummary);
+  areaField.addEventListener("change",updateProviderSummary);
   updateProviderSummary();
 
   form.addEventListener("submit", function(event){
