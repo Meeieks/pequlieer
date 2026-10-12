@@ -33,7 +33,7 @@
         <p class="standalone-note">Sending an enquiry doesn’t confirm a booking or guarantee that a provider is available. We’ll discuss the proposed service, price and next steps with you before anything is arranged.</p>
       </div>
       <form class="standalone-form" id="customer-request-form" aria-labelledby="customer-form-title" aria-describedby="customer-required-note">
-        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2 id="customer-form-title">What can we help with?</h2><p>A few details will help us understand what you’re looking for and how best to help.</p><p class="form-required-note" id="customer-required-note">Fields marked * are required. Your browser will explain if a required field needs attention.</p></div>
+        <div class="standalone-form-heading"><p class="eyebrow">START YOUR REQUEST</p><h2 id="customer-form-title">What can we help with?</h2><p>A few details will help us understand what you’re looking for and how best to help.</p><p class="form-required-note" id="customer-required-note">Fields marked * are required. When you continue, your message will open in WhatsApp for you to review and send.</p></div>
         <div class="request-selection-summary" id="request-selection-summary" aria-live="polite">
           <span class="request-selection-icon" aria-hidden="true">✓</span>
           <div class="request-selection-copy">
@@ -55,12 +55,12 @@
         <select id="customer-service" name="Service category" required>
           <option value="">Choose a category</option>
           <option>Home & Property</option>
-          <option>Repairs & Metalwork</option>
           <option>Moving & Physical Help</option>
-          <option>Education & Tutoring</option>
           <option>Digital & Technology</option>
-          <option>Family & Childcare</option>
+          <option>Education & Tutoring</option>
+          <option>Repairs & Metalwork</option>
           <option>Events & Catering</option>
+          <option>Family & Childcare</option>
           <option>Tourism & Visitors</option>
           <option>Something Else</option>
         </select>
@@ -75,7 +75,7 @@
           <option>Just planning / no fixed date</option>
         </select>
         <label for="customer-details">Tell us a little more *</label>
-        <textarea id="customer-details" name="Request details" rows="5" placeholder="Describe what you need, the job, or the problem..." required></textarea>
+        <textarea id="customer-details" name="Request details" rows="5" placeholder="What needs to be done? Include useful details such as the size of the job, what is wrong, or any specific requirements." required></textarea>
         <button class="button primary full" type="submit">Continue to WhatsApp <span>→</span></button>
         <p class="form-note">Your enquiry is not sent until you press <strong>Send</strong> in WhatsApp. Please check the message before sending.</p>
         <p id="customer-form-status" class="standalone-status" aria-live="polite" aria-atomic="true"></p>
