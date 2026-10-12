@@ -1186,3 +1186,30 @@ textarea::placeholder{
     font-size:.72rem;
   }
 }
+
+
+/* Pequlieer original logo rollout */
+.nav{min-height:94px}
+.nav .brand-logo-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  padding:0;
+  line-height:1;
+  letter-spacing:normal;
+}
+.brand-logo-image{
+  display:block;
+  width:auto;
+  height:84px;
+  max-width:92px;
+  object-fit:contain;
+}
+@media(max-width:850px){
+  .nav{min-height:0}
+  .nav .brand-logo-image{height:61px;max-width:67px}
+}
+@media(max-width:520px){
+  .nav .brand-logo-image{height:55px;max-width:61px}
+}
