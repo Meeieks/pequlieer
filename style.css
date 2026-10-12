@@ -1095,3 +1095,17 @@ textarea::placeholder{
   .popular-card-copy small{font-size:.74rem}
   .popular-grid a.popular-card .popular-arrow{right:10px;bottom:12px;width:23px;height:23px}
 }
+
+
+/* Clear expectation-setting beneath the enquiry steps */
+.process-note{
+  max-width:780px;
+  margin:26px 0 0;
+  padding:16px 18px;
+  border-left:4px solid #8a4c32;
+  border-radius:0 10px 10px 0;
+  background:#f4f1e9;
+  color:#405449;
+  font-size:.94rem;
+  line-height:1.65;
+}
