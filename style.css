@@ -1595,3 +1595,58 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
   .why-grid article h3{grid-column:2!important;grid-row:1!important}
   .why-grid article p{grid-column:2!important;grid-row:2!important;max-width:54ch!important}
 }
+
+
+/* Audience section: visual bridge from the process into the visitor's next step. */
+.audience-intro{
+  max-width:620px;
+  margin:18px 0 0;
+  color:#e0e8e3;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+.audience-grid{
+  align-items:stretch;
+  gap:26px;
+  margin-top:34px!important;
+}
+.audience-grid article{
+  display:flex;
+  flex-direction:column;
+  padding:0!important;
+  overflow:hidden;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.audience-image{
+  display:block;
+  width:100%;
+  height:235px;
+  object-fit:cover;
+  object-position:center;
+}
+.audience-card-copy{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:30px 34px 34px;
+}
+.audience-card-copy h3{
+  margin-top:14px!important;
+}
+.audience-card-copy p{
+  flex:1;
+}
+.audience-card-copy .button{
+  margin-top:6px;
+}
+@media(max-width:760px){
+  .audience-grid{grid-template-columns:1fr!important;gap:22px!important}
+  .audience-image{height:220px}
+  .audience-card-copy{padding:26px 24px 28px}
+}
+@media(max-width:520px){
+  .audience-intro{font-size:.97rem}
+  .audience-image{height:190px}
+}
