@@ -1219,3 +1219,10 @@ textarea::placeholder{
 .brand-logo-image{
   mix-blend-mode:multiply;
 }
+
+
+/* Pequlieer logo: crop the extra blank canvas around the supplied artwork in the header */
+.nav .brand-logo-link{flex:0 0 auto;width:min(230px,38vw);height:98px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.brand-logo-image{display:block;width:100%;height:98px;max-width:none;max-height:none;object-fit:cover;object-position:center;mix-blend-mode:normal}
+@media(max-width:850px){.nav .brand-logo-link{width:min(190px,42vw);height:82px}.nav .brand-logo-image{width:100%;height:82px;max-width:none;max-height:none}}
+@media(max-width:520px){.nav .brand-logo-link{width:min(165px,43vw);height:72px}.nav .brand-logo-image{width:100%;height:72px;max-width:none;max-height:none}}
