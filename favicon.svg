@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#f7f5ef"/>
-  <rect x="2" y="2" width="60" height="60" rx="11" fill="none" stroke="#8a4c32" stroke-width="2"/>
-  <text x="32" y="47" text-anchor="middle" font-family="Palatino Linotype, Georgia, serif" font-size="46" font-weight="700" fill="#203f36">P</text>
+  <rect width="64" height="64" rx="13" fill="#111111"/>
+  <ellipse cx="32" cy="32" rx="23" ry="17" fill="none" stroke="#f7f3e8" stroke-width="2.2" transform="rotate(-28 32 32)"/>
+  <text x="32" y="47" text-anchor="middle" font-family="Palatino Linotype, Georgia, serif" font-size="43" font-weight="700" fill="#f7f3e8">P</text>
 </svg>
