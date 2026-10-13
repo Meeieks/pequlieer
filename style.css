@@ -1650,3 +1650,9 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
   .audience-intro{font-size:.97rem}
   .audience-image{height:190px}
 }
+
+
+/* Keep the audience choice focused on the visitor, not unrelated stock-photo activity. */
+.audience-grid article{overflow:visible!important}
+.audience-card-copy{padding:34px!important}
+@media(max-width:760px){.audience-card-copy{padding:26px 24px 28px!important}}
