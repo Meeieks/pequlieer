@@ -1387,3 +1387,85 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
 .provider-registration-form .form-note{
   color:#202b26!important;
 }
+
+
+/* Homepage hero photography: give the first screen a human, practical focal point. */
+.hero-photo-feature{
+  position:relative;
+  min-width:0;
+  min-height:520px;
+  height:100%;
+  max-height:650px;
+  overflow:hidden;
+  background:#dfe5dc;
+  border:1px solid #d8ded5;
+}
+.hero-photo-feature>img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:520px;
+  max-height:650px;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-photo-feature:after{
+  content:"";
+  position:absolute;
+  inset:25% 0 0;
+  background:linear-gradient(to bottom,transparent 0%,rgba(18,38,30,.16) 23%,rgba(18,38,30,.86) 100%);
+  pointer-events:none;
+}
+.hero-photo-caption{
+  position:absolute;
+  z-index:1;
+  left:clamp(20px,3vw,34px);
+  right:clamp(20px,3vw,34px);
+  bottom:clamp(22px,3vw,36px);
+  color:#fff;
+}
+.hero-photo-label{
+  display:inline-block;
+  margin-bottom:13px;
+  color:#fff;
+  font-size:.67rem;
+  line-height:1.4;
+  font-weight:800;
+  letter-spacing:.14em;
+}
+.hero-photo-caption h2{
+  margin:0 0 12px;
+  color:#fff;
+  font:500 clamp(1.8rem,3.2vw,2.8rem)/1.08 "Playfair Display",Georgia,serif;
+  letter-spacing:-.025em;
+}
+.hero-photo-caption p{
+  max-width:390px;
+  margin:0 0 19px;
+  color:#fff;
+  font-size:.93rem;
+  line-height:1.6;
+}
+.hero-photo-caption a{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  padding-bottom:5px;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.75);
+  font-size:.86rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.hero-photo-caption a:focus-visible{outline:3px solid #e7d5b2;outline-offset:5px}
+@media(max-width:800px){
+  .market-hero-layout{grid-template-columns:minmax(0,1fr);gap:30px;padding:45px 0 42px}
+  .hero-photo-feature{min-height:390px;max-height:500px}
+  .hero-photo-feature>img{min-height:390px;max-height:500px}
+}
+@media(max-width:520px){
+  .hero-photo-feature{min-height:350px;max-height:420px}
+  .hero-photo-feature>img{min-height:350px;max-height:420px}
+  .hero-photo-caption{left:20px;right:20px;bottom:22px}
+  .hero-photo-caption h2{font-size:1.85rem}
+}
