@@ -125,8 +125,11 @@
     ];
     const message = "Hi Pequlieer, I’d like to join the local service provider network.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
     const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
+    const fallback = document.getElementById("provider-whatsapp-fallback");
+    fallback.href = url;
+    fallback.hidden = false;
+    document.getElementById("provider-form-status").textContent = "WhatsApp should open with your prepared message. If it does not, use the link below. Your details are only sent when you press Send in WhatsApp.";
     window.open(url, "_blank", "noopener,noreferrer");
-    document.getElementById("provider-form-status").textContent = "WhatsApp is opening with your registration. Please check the details and press Send to submit them to Pequlieer.";
   });
 })();
 </script>
