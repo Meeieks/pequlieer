@@ -1238,3 +1238,18 @@ textarea::placeholder{
 @media(max-width:520px){
   .nav .brand-logo-link{width:min(220px,58vw);height:88px}
 }
+
+
+/* Balanced, subtle Pequlieer logo sizing across screens */
+.nav{min-height:82px}
+.nav .brand-logo-link{width:205px;height:74px;flex:0 1 205px;overflow:hidden}
+.nav .brand-logo-image{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+@media(max-width:850px){
+  .nav{min-height:0}
+  .nav .brand-logo-link{width:172px;height:64px;flex:0 1 172px}
+}
+@media(max-width:520px){
+  .nav{gap:8px;padding-top:5px}
+  .nav .brand-logo-link{width:138px;height:54px;flex:0 1 138px}
+  .nav .nav-cta{font-size:.68rem;padding:8px 9px}
+}
