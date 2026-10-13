@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+/* System fonts are used for a lighter, faster-loading visual style. */
 :root{--ink:#18211e;--muted:#66716b;--paper:#fff9ef;--white:#fff;--line:#eadfce;--accent:#ff5b35;--dark:#173f38;--yellow:#ffd447;--teal:#35c7b4;--pink:#f06aa7;--purple:#7557d9;--soft:#f2e7d8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}.wide{width:min(1180px,90%);margin:auto}
 .site-header{position:sticky;top:0;z-index:20;background:rgba(245,244,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(217,217,210,.7)}.nav{width:min(1180px,90%);min-height:68px;margin:auto;display:flex;align-items:center;gap:28px}.brand{font-weight:700;letter-spacing:.17em;color:var(--dark);text-decoration:none;font-size:.98rem}.nav nav{display:flex;gap:24px;margin-left:auto}.nav nav a{color:var(--ink);text-decoration:none;font-size:.84rem}.nav nav a:hover{color:var(--accent)}.nav-cta{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(255,91,53,.22);text-decoration:none;padding:10px 17px;border-radius:999px;font-size:.82rem;white-space:nowrap}
@@ -1191,3 +1191,131 @@ textarea::placeholder{
 /* Accessible fallback link for prepared WhatsApp messages */
 .whatsapp-fallback-link{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:#315d48;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .whatsapp-fallback-link[hidden]{display:none!important}
+
+
+/* Pequlieer design direction: crisp edges, restrained colour, no decorative effects */
+:root{
+  --ink:#202b26;
+  --muted:#5b675f;
+  --paper:#f7f6f1;
+  --white:#ffffff;
+  --line:#d5d9d1;
+  --accent:#8a4c32;
+  --dark:#203f36;
+  --yellow:#c9a86b;
+  --teal:#6b8b80;
+  --pink:#d3b6a9;
+  --purple:#777f72;
+  --soft:#ece8de;
+}
+html,body,button,input,textarea,select{
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+h1,h2,h3,h4,h5,h6,
+.statement h2,.section h2,.not-listed h2,
+.category-overlay h3,.audience h3,.category-services-heading h3{
+  font-family:Georgia,"Times New Roman",serif!important;
+  letter-spacing:normal!important;
+}
+/* Remove rounded corners and pill styling throughout the interface. */
+*,*::before,*::after{
+  border-radius:0!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+}
+/* Remove gradient/radial colour treatments and glow-like effects. */
+.hero,.not-listed,.provider,.category-card-other,.category-card-other:after,
+.popular-card-image-placeholder,.market-hero,.market-hero-panel,
+.service-search,.nav-cta,.button,.hero-kicker{
+  background-image:none!important;
+}
+.hero{
+  background:#f7f6f1!important;
+}
+.not-listed,.provider{
+  background:#8a4c32!important;
+}
+.category-card-other{
+  background:#6c766a!important;
+}
+.category-card-other:after{
+  background:rgba(24,43,35,.55)!important;
+}
+.popular-card-image-placeholder{
+  background:#dfe5dc!important;
+  color:#203f36!important;
+}
+.site-header{
+  background:#faf9f5!important;
+  backdrop-filter:none!important;
+}
+.nav-cta,.market-hero-copy .service-search button,.service-search button{
+  background:#203f36!important;
+  color:#fff!important;
+}
+.button.primary,.primary{
+  background:#203f36!important;
+  color:#fff!important;
+}
+.button.secondary,.secondary{
+  background:#e7d5b2!important;
+  color:#203f36!important;
+}
+.button.light,.light{
+  background:#fff!important;
+  color:#203f36!important;
+  border:1px solid #d5d9d1!important;
+}
+.hero-kicker{
+  background:#e8eee8!important;
+  border:1px solid #d5d9d1!important;
+  color:#203f36!important;
+}
+.hero h1 span:after{
+  border-radius:0!important;
+  height:3px!important;
+}
+.category-card:after{
+  background:rgba(19,39,32,.58)!important;
+}
+.category-card:hover,.popular-grid a:hover,.popular-grid a.popular-card:hover,
+.button:hover,.whatsapp-float:hover,.category-service-link:hover{
+  transform:none!important;
+  filter:none!important;
+}
+.category-card img,.popular-card-image,.hero-photo-strip img{
+  transition:none!important;
+}
+.category-card:hover img,.popular-grid a.popular-card:hover .popular-card-image,
+.hero-photo-strip img:hover,.hero-photo-strip img:nth-child(2):hover,
+.hero-photo-strip img:nth-child(3):hover{
+  transform:none!important;
+  filter:none!important;
+}
+.floating-shape{display:none!important;animation:none!important}
+.service-search,.standalone-form,form,.category-services-panel,
+.category-service-link,.popular-grid a,.why-grid article,.after-grid article,
+.audience article,.request-selection-summary,.request-selection-icon,
+input,textarea,select,.category-services-close,.skip-link{
+  box-shadow:none!important;
+}
+.how{background:#fff!important}
+.popular{background:#f1f0e9!important}
+.why{background:#e9ede6!important}
+.services{background:#f7f6f1!important}
+.after-enquiry{background:#fff!important}
+.audience{background:#203f36!important}
+.about{background:#f1f0e9!important}
+.enquiry{background:#fff!important}
+.faq{background:#f1f0e9!important}
+.statement{background:#203f36!important}
+.category-services-panel{background:#eef1eb!important}
+.popular-grid a.popular-card{background:#fff!important}
+.why-grid article{background:#fff!important}
+.after-grid article{background:#f1f0e9!important}
+.audience article{background:#fff!important}
+input,textarea,select{background:#fff!important;border:1px solid #cfd5cc!important}
+input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#8a4c32!important}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
