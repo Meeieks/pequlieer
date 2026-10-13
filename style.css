@@ -1186,3 +1186,8 @@ textarea::placeholder{
     font-size:.72rem;
   }
 }
+
+
+/* Accessible fallback link for prepared WhatsApp messages */
+.whatsapp-fallback-link{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:#315d48;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.whatsapp-fallback-link[hidden]{display:none!important}
