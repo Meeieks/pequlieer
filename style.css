@@ -1226,3 +1226,15 @@ textarea::placeholder{
 .brand-logo-image{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center;mix-blend-mode:normal}
 @media(max-width:850px){.nav .brand-logo-link{width:min(190px,42vw);height:82px}.nav .brand-logo-image{width:100%;height:100%;max-width:none;max-height:none}}
 @media(max-width:520px){.nav .brand-logo-link{width:min(165px,43vw);height:72px}.nav .brand-logo-image{width:100%;height:100%;max-width:none;max-height:none}}
+
+
+/* Make the Pequlieer logo more prominent in the header */
+.nav{min-height:120px}
+.nav .brand-logo-link{width:min(300px,42vw);height:116px}
+@media(max-width:850px){
+  .nav{min-height:0}
+  .nav .brand-logo-link{width:min(250px,48vw);height:102px}
+}
+@media(max-width:520px){
+  .nav .brand-logo-link{width:min(220px,58vw);height:88px}
+}
