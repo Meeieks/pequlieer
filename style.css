@@ -1358,3 +1358,32 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
     font-size:clamp(1.9rem,7.5vw,2.65rem)!important;
   }
 }
+
+
+/* Contrast fix: make text readable on the terracotta callout panels. */
+.not-listed .eyebrow,
+.provider .eyebrow{
+  color:#fff!important;
+}
+.not-listed h2,
+.provider h2{
+  color:#fff!important;
+}
+.not-listed p:not(.eyebrow),
+.provider-grid>div>p:not(.eyebrow){
+  color:#fff!important;
+}
+.not-listed .button.light{
+  background:#fff!important;
+  color:#203f36!important;
+  border:2px solid #fff!important;
+}
+.provider-registration-form{
+  background:#fff!important;
+  color:#202b26!important;
+}
+.provider-registration-form label,
+.provider-registration-form p,
+.provider-registration-form .form-note{
+  color:#202b26!important;
+}
