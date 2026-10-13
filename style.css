@@ -1213,3 +1213,9 @@ textarea::placeholder{
 @media(max-width:520px){
   .nav .brand-logo-image{height:55px;max-width:61px}
 }
+
+
+/* Restore the original supplied logo artwork */
+.brand-logo-image{
+  mix-blend-mode:multiply;
+}
