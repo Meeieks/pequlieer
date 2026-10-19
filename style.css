@@ -1659,17 +1659,6 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
 
 
 /* Business clarity additions: keep the established restrained, square-edged design. */
-.operating-principles{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:28px;
-  margin-top:28px;
-  border-top:1px solid #cfd6cc;
-}
-.operating-principles article{padding:20px 0 0;border-top:2px solid #c9a86b}
-.operating-principles article>b{display:block;margin-bottom:12px;color:#8a4c32;font-size:.78rem;letter-spacing:.12em}
-.operating-principles h3{margin:0 0 8px;font-size:1.12rem;font-weight:500}
-.operating-principles p{margin:0;color:#5b675f;font-size:.93rem;line-height:1.7}
 .digital-support{background:#fff!important}
 .digital-support-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,78px);align-items:start}
 .digital-support-intro h2{max-width:560px}
@@ -1683,8 +1672,6 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
 .digital-support-note{grid-column:1/-1;margin:0;padding:16px 18px;border-left:3px solid #8a4c32;background:#f1f0e9;color:#405449;font-size:.9rem;line-height:1.7}
 footer a[href="digital-services.html"]{text-underline-offset:3px}
 @media(max-width:760px){
-  .operating-principles{grid-template-columns:1fr;gap:0}
-  .operating-principles article{padding:18px 0;border-bottom:1px solid #d5d9d1}
   .digital-support-layout{grid-template-columns:1fr;gap:28px}
   .digital-support-note{grid-column:auto}
 }
