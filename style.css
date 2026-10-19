@@ -1656,3 +1656,68 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
 .audience-grid article{overflow:visible!important}
 .audience-card-copy{padding:34px!important}
 @media(max-width:760px){.audience-card-copy{padding:26px 24px 28px!important}}
+
+
+/* Business clarity additions: keep the established restrained, square-edged design. */
+.operating-principles{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  margin-top:28px;
+  border-top:1px solid #cfd6cc;
+}
+.operating-principles article{padding:20px 0 0;border-top:2px solid #c9a86b}
+.operating-principles article>b{display:block;margin-bottom:12px;color:#8a4c32;font-size:.78rem;letter-spacing:.12em}
+.operating-principles h3{margin:0 0 8px;font-size:1.12rem;font-weight:500}
+.operating-principles p{margin:0;color:#5b675f;font-size:.93rem;line-height:1.7}
+.digital-support{background:#fff!important}
+.digital-support-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,78px);align-items:start}
+.digital-support-intro h2{max-width:560px}
+.digital-support-intro>p:not(.eyebrow){max-width:520px;color:#5b675f;line-height:1.8}
+.digital-support-intro .button{margin-top:14px}
+.digital-offer-list{border-top:1px solid #d5d9d1}
+.digital-offer-list article{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid #d5d9d1}
+.digital-offer-list article>span{color:#8a4c32;font-size:.78rem;letter-spacing:.12em;padding-top:4px}
+.digital-offer-list h3{margin:0 0 6px;font-size:1.12rem;font-weight:500}
+.digital-offer-list p{margin:0;color:#5b675f;font-size:.93rem;line-height:1.7}
+.digital-support-note{grid-column:1/-1;margin:0;padding:16px 18px;border-left:3px solid #8a4c32;background:#f1f0e9;color:#405449;font-size:.9rem;line-height:1.7}
+footer a[href="digital-services.html"]{text-underline-offset:3px}
+@media(max-width:760px){
+  .operating-principles{grid-template-columns:1fr;gap:0}
+  .operating-principles article{padding:18px 0;border-bottom:1px solid #d5d9d1}
+  .digital-support-layout{grid-template-columns:1fr;gap:28px}
+  .digital-support-note{grid-column:auto}
+}
+
+
+/* Dedicated small-business digital-services page */
+.digital-page-container{max-width:1060px}
+.digital-page-hero{max-width:820px;padding:34px 0 56px}
+.digital-page-hero h1{max-width:800px;margin:16px 0 20px;font-size:clamp(2.5rem,5vw,4.3rem);line-height:1.08;font-weight:500}
+.digital-page-hero .standalone-lead{max-width:680px;margin-bottom:24px}
+.digital-page-section{padding:46px 0;border-top:1px solid #d5d9d1}
+.digital-page-section h2,.digital-project-process h2{margin:8px 0 24px;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.12;font-weight:500}
+.digital-service-list{border-top:1px solid #d5d9d1}
+.digital-service-list article{display:grid;grid-template-columns:54px minmax(0,1fr);gap:22px;padding:25px 0;border-bottom:1px solid #d5d9d1}
+.digital-service-list article>span,.digital-project-steps article>b{color:#8a4c32;font-size:.8rem;letter-spacing:.12em}
+.digital-service-list h3,.selected-work-list h3,.digital-project-steps h3{margin:0 0 8px;font-size:1.2rem;font-weight:500}
+.digital-service-list p,.selected-work-list p,.digital-project-steps p{margin:0 0 9px;color:#5b675f;line-height:1.75}
+.digital-service-detail{font-size:.9rem}
+.digital-work-intro{max-width:720px;margin:-6px 0 26px;color:#5b675f;line-height:1.75}
+.selected-work-list{border-top:1px solid #d5d9d1}
+.selected-work-list article{display:grid;grid-template-columns:54px minmax(0,1fr);gap:22px;padding:28px 0;border-bottom:1px solid #d5d9d1}
+.selected-work-number{color:#8a4c32;font-size:.8rem;letter-spacing:.12em}
+.selected-work-type{margin-bottom:8px!important;color:#8a4c32!important;font-size:.72rem;font-weight:700;letter-spacing:.1em}
+.selected-work-list a{display:inline-flex;gap:12px;margin-top:7px;color:#203f36;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.digital-project-process{padding:46px 0 58px;border-top:1px solid #d5d9d1}
+.digital-project-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:24px 0}
+.digital-project-steps article{padding-top:18px;border-top:2px solid #c9a86b}
+.digital-project-steps article>b{display:block;margin-bottom:13px}
+.digital-page-note{max-width:800px;margin:24px 0;padding:16px 18px;border-left:3px solid #8a4c32;background:#f1f0e9;color:#405449;line-height:1.75}
+.digital-project-process>.button{margin-top:10px}
+@media(max-width:650px){
+  .digital-page-hero{padding:24px 0 42px}
+  .digital-page-section,.digital-project-process{padding:34px 0}
+  .digital-service-list article,.selected-work-list article{grid-template-columns:34px minmax(0,1fr);gap:14px;padding:21px 0}
+  .digital-project-steps{grid-template-columns:1fr;gap:18px}
+}
