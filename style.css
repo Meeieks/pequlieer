@@ -1708,3 +1708,59 @@ footer a[href="digital-services.html"]{text-underline-offset:3px}
   .digital-service-list article,.selected-work-list article{grid-template-columns:34px minmax(0,1fr);gap:14px;padding:21px 0}
   .digital-project-steps{grid-template-columns:1fr;gap:18px}
 }
+
+
+/* Free Pexels photography: show service images as intentional visual category cards. */
+.popular-grid a.popular-card{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  border-radius:8px;
+  background:#fff;
+}
+.popular-card-image{
+  display:block;
+  width:100%;
+  height:154px;
+  flex:0 0 154px;
+  object-fit:cover;
+  object-position:center;
+  background:#e4e8e0;
+}
+.popular-card-copy{
+  display:block;
+  flex:1;
+  padding:17px 17px 19px;
+}
+.popular-card-copy strong{font-size:.94rem;line-height:1.35}
+.popular-card-copy small{font-size:.77rem;line-height:1.5}
+.popular-arrow{
+  position:absolute;
+  right:12px;
+  top:166px;
+  background:#fff;
+}
+.popular-grid a.popular-card{position:relative}
+.popular-grid a.popular-card:hover{transform:translateY(-2px)}
+.popular-card-image{transition:transform .25s ease}
+.popular-grid a.popular-card:hover .popular-card-image{transform:scale(1.025)}
+.digital-hero-image{
+  display:block;
+  width:100%;
+  max-height:390px;
+  aspect-ratio:16/7;
+  margin-top:34px;
+  object-fit:cover;
+  object-position:center 44%;
+  border:1px solid #d9ded4;
+}
+@media(max-width:650px){
+  .popular-card-image{height:180px;flex-basis:180px}
+  .popular-arrow{top:192px}
+  .digital-hero-image{aspect-ratio:4/3;margin-top:26px}
+}
+@media(prefers-reduced-motion:reduce){.popular-card-image{transition:none!important}}
