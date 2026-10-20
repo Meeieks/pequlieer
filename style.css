@@ -1660,9 +1660,10 @@ input:focus,textarea:focus,select:focus{box-shadow:none!important;border-color:#
 
 /* Business clarity additions: keep the established restrained, square-edged design. */
 .digital-support{background:#fff!important}
-.digital-support-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,78px);align-items:start}
-.digital-support-intro h2{max-width:560px}
-.digital-support-intro>p:not(.eyebrow){max-width:520px;color:#5b675f;line-height:1.8}
+.digital-support-layout{display:block}
+.digital-support-intro{max-width:760px;margin-inline:auto}
+.digital-support-intro h2{max-width:680px}
+.digital-support-intro>p:not(.eyebrow){max-width:680px;color:#5b675f;line-height:1.8}
 .digital-support-intro .button{margin-top:14px}
 .digital-offer-list{border-top:1px solid #d5d9d1}
 .digital-offer-list article{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid #d5d9d1}
