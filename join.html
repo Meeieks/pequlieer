@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Introduce your service to Pequlieer, a Cape Town local service connection network. Share your experience, service area and contact details.">
+<meta name="description" content="Explore a service partnership with Pequlieer in Cape Town. Share your experience, service area and contact details.">
 <meta name="theme-color" content="#203f36">
 <link rel="canonical" href="https://meeieks.github.io/pequlieer/join.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pequlieer">
-<meta property="og:title" content="Join the Service Network | Pequlieer">
-<meta property="og:description" content="Introduce your service to Pequlieer, a Cape Town local service connection network.">
+<meta property="og:title" content="Partner with Pequlieer | Pequlieer">
+<meta property="og:description" content="Explore a service partnership with Pequlieer in Cape Town.">
 <meta property="og:url" content="https://meeieks.github.io/pequlieer/join.html">
-<title>Join the Service Network | Pequlieer</title>
+<title>Partner with Pequlieer | Pequlieer</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
@@ -20,7 +20,7 @@
 <header class="site-header">
   <div class="nav">
     <a class="brand" href="index.html" aria-label="Pequlieer home">PEQULIEER</a>
-    <nav aria-label="Main navigation"><a href="index.html#browse-services">Browse Services</a><a href="index.html#how">How It Works</a><a href="request.html">Request a Service</a></nav>
+    <nav aria-label="Main navigation"><a href="index.html#browse-services">Browse Services</a><a href="index.html#digital-support">Digital Support</a><a href="request.html">Request a Service</a></nav>
     <a class="nav-cta" href="index.html">Back to Homepage</a>
   </div>
 </header>
@@ -122,7 +122,7 @@
       ["Experience or qualifications", document.getElementById("provider-experience").value.trim()],
       ["Website or examples of work", document.getElementById("provider-proof").value.trim()]
     ];
-    const message = "Hi Pequlieer, I’d like to join the local service provider network.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
+    const message = "Hi Pequlieer, I’m interested in partnering with Pequlieer to offer my services.\n\n" + fields.filter(item => item[1]).map(item => item[0] + ": " + item[1]).join("\n");
     const url = "https://wa.me/27681226185?text=" + encodeURIComponent(message);
     const fallback = document.getElementById("provider-whatsapp-fallback");
     fallback.href = url;
