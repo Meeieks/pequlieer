@@ -1765,3 +1765,76 @@ footer a[href="digital-services.html"]{text-underline-offset:3px}
   .digital-hero-image{aspect-ratio:4/3;margin-top:26px}
 }
 @media(prefers-reduced-motion:reduce){.popular-card-image{transition:none!important}}
+
+/* Editorial refinement: distinctive typography, quieter details, and clear service-first hierarchy. */
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+h1,h2,h3,.category-overlay h3,.audience-card-copy h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+}
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  letter-spacing:-.055em;
+  line-height:1.02;
+}
+.hero h1 span:after{display:none}
+.hero h1 span{
+  font-style:italic;
+  text-decoration:none;
+}
+.hero-kicker{border-radius:2px}
+.service-search{
+  border-radius:3px;
+  box-shadow:none;
+  gap:4px;
+  padding:5px;
+}
+.service-search button{border-radius:2px}
+.button,.nav-cta,.whatsapp-float{
+  border-radius:2px;
+  box-shadow:none;
+}
+.button:hover,.popular-grid a:hover,.category-card:hover,.whatsapp-float:hover{
+  box-shadow:none;
+}
+.button:hover{transform:translateY(-1px)}
+.nav-cta{padding:11px 16px}
+.section{padding-block:78px}
+.statement{padding-block:78px}
+.popular-grid a.popular-card{
+  border-radius:2px;
+  border-color:#dedfd7;
+  box-shadow:none;
+}
+.popular-card-copy{padding:17px 16px 18px}
+.popular-arrow{border:1px solid #e4e3da;border-radius:2px;box-shadow:none}
+.category-card{
+  border-radius:2px;
+  box-shadow:none;
+}
+.category-card:hover{box-shadow:none;transform:translateY(-2px)}
+.why-photo-row img,.about-image,.statement-image,.audience-image,.digital-hero-image{
+  border-radius:0;
+  box-shadow:none;
+}
+.audience-card-copy{padding:30px 28px 32px!important}
+.audience-grid article{border-top:1px solid #d5d9d1}
+.category-services-panel,form{
+  border-radius:2px;
+  box-shadow:none;
+}
+input,textarea,select{border-radius:2px}
+.digital-support-intro .button{margin-top:18px}
+.faq-list summary{line-height:1.5}
+@media(max-width:760px){
+  .section,.statement{padding-block:58px}
+  .hero h1{letter-spacing:-.045em}
+  .audience-card-copy{padding:25px 20px 27px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
