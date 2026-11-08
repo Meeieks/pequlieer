@@ -1838,3 +1838,16 @@ input,textarea,select{border-radius:2px}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+
+/* Clear enquiry journey and practical project examples. */
+.how-it-works{background:#f4f0e7}
+.how-it-works h2{max-width:720px}
+.how-intro{max-width:650px;margin:0 0 34px;color:#5b675f;font-size:1.02rem;line-height:1.75}
+.how-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid #cfd6cc}
+.how-steps article{padding:20px 12px 0 0;border-top:2px solid #c9a86b}
+.how-steps article>span{display:block;margin-bottom:18px;color:#8a4c32;font-size:.78rem;letter-spacing:.12em}
+.how-steps h3{margin:0 0 9px;font-size:1.15rem;font-weight:500}
+.how-steps p{max-width:38ch;margin:0;color:#5b675f;font-size:.93rem;line-height:1.7}
+.digital-examples .digital-page-note{margin-top:25px}
+@media(max-width:650px){.how-steps{grid-template-columns:1fr;gap:18px}.how-steps article{padding-top:15px}.how-steps article>span{margin-bottom:10px}}
