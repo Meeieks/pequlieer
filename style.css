@@ -1895,3 +1895,13 @@ body{background:var(--paper);color:var(--ink)}
 .category-card:hover{border-color:var(--teal)}
 footer,.site-footer{background:var(--dark);color:#f8fcff}
 input:focus,textarea:focus,select:focus{outline-color:var(--accent);border-color:var(--accent)}
+
+
+/* Scarlet red accents added to the sky-blue and cloud-white palette */
+:root{--accent:#e53945}
+.nav-cta,.service-search button,.button,.btn-primary{background:#e53945;box-shadow:0 8px 22px rgba(229,57,69,.18)}
+.nav-cta:hover,.service-search button:hover,.button:hover,.btn-primary:hover{background:#c92b37}
+.hero h1 span,.eyebrow{color:#e53945}
+.hero h1 span{ text-decoration-color:#cdeeff}
+.category-card:hover{border-color:#e53945}
+input:focus,textarea:focus,select:focus{outline-color:#e53945;border-color:#e53945}
