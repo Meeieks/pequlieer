@@ -645,7 +645,7 @@ section[id]{scroll-margin-top:92px}
 }
 .standalone-form-heading{padding-bottom:17px;margin-bottom:8px;border-bottom:1px solid #e9ece5}
 .standalone-form-heading .eyebrow{margin-bottom:8px}
-.standalone-form-heading h2{margin:0 0 6px;color:#203f36;font:600 1.85rem/1.2 "Playfair Display",serif}
+.standalone-form-heading h2,.standalone-form-heading h1{margin:0 0 6px;color:#203f36;font:600 1.85rem/1.2 "Playfair Display",serif}
 .standalone-form-heading p:not(.eyebrow){margin:0;color:#5e6a62;font-size:.78rem}
 .standalone-form label{margin:14px 0 0;color:#34473b;font-size:.81rem;font-weight:700}
 .standalone-form label span{font-weight:400;color:#5e6a62;font-size:.76rem}
@@ -698,7 +698,7 @@ section[id]{scroll-margin-top:92px}
   .standalone-copy h1{font-size:3rem}
   .standalone-lead{font-size:.94rem}
   .standalone-form{padding:22px 18px;border-radius:10px}
-  .standalone-form-heading h2{font-size:1.6rem}
+  .standalone-form-heading h2,.standalone-form-heading h1{font-size:1.6rem}
   .standalone-footer .standalone-container{display:block}
   .standalone-footer .standalone-container>p{margin:8px 0}
   .standalone-footer .standalone-container>a:last-child{margin-left:0}
