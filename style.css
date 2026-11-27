@@ -1929,3 +1929,15 @@ input:focus,textarea:focus,select:focus{outline-color:#e63946!important;border-c
 footer,.site-footer,.standalone-footer{background:#287eb8!important;color:#fff!important}
 .whatsapp-float,.whatsapp-button,.inline-whatsapp{background:#25D366!important;color:#fff!important}
 ::selection{background:#cdeeff!important;color:#243746!important}
+
+
+/* Targeted corrections for remaining legacy section and navigation colours */
+.site-header .nav-cta{background:#e63946!important;color:#fff!important;border-color:#e63946!important}
+.site-header .nav-cta:hover{background:#c92d3a!important}
+section.audience{background:#eaf6fd!important;color:#243746!important}
+section.audience .audience-grid article{background:#fff!important;color:#243746!important;border:1px solid #d9eaf5!important}
+section.audience .audience-grid article h3,section.audience .audience-grid article p,section.audience .audience-grid article span{color:#243746!important}
+section.audience .audience-grid article .button.primary{background:#e63946!important;color:#fff!important;border-color:#e63946!important}
+section.audience .audience-grid article .button.secondary{background:#83c9f4!important;color:#243746!important;border-color:#83c9f4!important}
+section.audience .audience-grid article .button.primary:hover{background:#c92d3a!important}
+section.audience .audience-grid article .button.secondary:hover{background:#55aee8!important}
