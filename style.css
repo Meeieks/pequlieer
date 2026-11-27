@@ -2002,3 +2002,8 @@ footer,.site-footer,.standalone-footer{background:var(--deep-blue)!important;col
 .popular-card-copy{min-height:125px!important}
 @media(max-width:900px){.popular-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.popular-card-image{height:200px!important;flex-basis:200px!important}}
 @media(max-width:600px){.popular-grid{grid-template-columns:1fr!important;gap:16px!important}.popular-card-image{height:210px!important;flex-basis:210px!important}.popular-card-copy{min-height:unset!important;padding:18px!important}.popular-arrow{right:12px!important;bottom:12px!important}.browse-heading{align-items:flex-start!important}}
+
+
+/* Remove arrow glyphs from button labels and suppress arrow-style decorations */
+.button::after,.button::before,.nav-cta::after,.nav-cta::before,.service-search button::after,.service-search button::before,.btn-primary::after,.btn-primary::before{content:none!important;display:none!important}
+.button,.nav-cta,.service-search button,.btn-primary{background-image:none!important}
