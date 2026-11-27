@@ -2007,3 +2007,13 @@ footer,.site-footer,.standalone-footer{background:var(--deep-blue)!important;col
 /* Remove arrow glyphs from button labels and suppress arrow-style decorations */
 .button::after,.button::before,.nav-cta::after,.nav-cta::before,.service-search button::after,.service-search button::before,.btn-primary::after,.btn-primary::before{content:none!important;display:none!important}
 .button,.nav-cta,.service-search button,.btn-primary{background-image:none!important}
+
+
+/* Final hero and floating-chat usability refinement */
+.hero-photo-caption{bottom:clamp(34px,5vw,58px)!important;left:clamp(22px,3.5vw,40px)!important;right:clamp(28px,5vw,54px)!important;max-width:560px!important}
+.hero-photo-caption h2{max-width:480px!important;font-size:clamp(1.65rem,2.8vw,2.5rem)!important;line-height:1.12!important;margin-bottom:10px!important}
+.hero-photo-caption p{max-width:360px!important;font-size:.9rem!important;line-height:1.55!important;margin-bottom:14px!important}
+.hero-photo-caption a{margin-top:2px!important}
+.whatsapp-float{position:fixed!important;right:20px!important;bottom:20px!important;max-width:calc(100vw - 40px)!important;padding:12px 16px!important;font-size:.88rem!important;line-height:1.25!important;border-radius:10px!important;box-shadow:0 6px 18px rgba(36,55,70,.18)!important;z-index:80!important}
+@media(max-width:800px){.hero-photo-caption{bottom:32px!important;left:22px!important;right:22px!important}.hero-photo-caption h2{max-width:100%!important;font-size:1.9rem!important}.hero-photo-caption p{max-width:100%!important}.whatsapp-float{right:14px!important;bottom:14px!important;padding:11px 14px!important;font-size:.82rem!important}}
+@media(max-width:520px){.hero-photo-caption{bottom:26px!important;left:18px!important;right:18px!important}.hero-photo-caption h2{font-size:1.7rem!important}.hero-photo-caption p{font-size:.85rem!important}.whatsapp-float{right:12px!important;bottom:12px!important;max-width:calc(100vw - 24px)!important}}
