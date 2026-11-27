@@ -1905,3 +1905,27 @@ input:focus,textarea:focus,select:focus{outline-color:var(--accent);border-color
 .hero h1 span{ text-decoration-color:#cdeeff}
 .category-card:hover{border-color:#e53945}
 input:focus,textarea:focus,select:focus{outline-color:#e53945;border-color:#e53945}
+
+
+/* FINAL BRAND PALETTE: Cloud White + Sky Blue + Scarlet Red */
+:root{--ink:#243746!important;--muted:#62798a!important;--paper:#f8fcff!important;--white:#fff!important;--line:#d9eaf5!important;--accent:#e63946!important;--dark:#287eb8!important;--yellow:#cdeeff!important;--teal:#83c9f4!important;--pink:#b6ddf5!important;--purple:#55aee8!important;--soft:#eaf6fd!important}
+body{background:#f8fcff!important;color:#243746!important}
+.site-header{background:rgba(248,252,255,.96)!important;border-color:#d9eaf5!important}
+.brand,.nav nav a{color:#287eb8!important}.nav nav a:hover{color:#e63946!important}
+.nav-cta,.button.primary,.primary,.service-search button,.market-hero-copy .service-search button,.btn-primary{background:#e63946!important;color:#fff!important;border-color:#e63946!important;box-shadow:0 8px 22px rgba(230,57,70,.16)!important}
+.nav-cta:hover,.button.primary:hover,.primary:hover,.service-search button:hover,.market-hero-copy .service-search button:hover,.btn-primary:hover{background:#c92d3a!important}
+.button.secondary,.secondary{background:#83c9f4!important;color:#243746!important;border-color:#83c9f4!important}
+.button.light,.light{background:#fff!important;color:#287eb8!important;border-color:#d9eaf5!important}
+.hero{background:radial-gradient(circle at 18% 22%,rgba(131,201,244,.32),transparent 23%),radial-gradient(circle at 82% 72%,rgba(85,174,232,.19),transparent 25%),radial-gradient(circle at 50% 25%,rgba(205,238,255,.55),transparent 28%),#f8fcff!important}
+.hero h1 span,.eyebrow{color:#e63946!important}.hero h1 span{text-decoration-color:#cdeeff!important}
+.hero-kicker{background:#eaf6fd!important;color:#287eb8!important;border-color:#d9eaf5!important}.hero-kicker span{color:#e63946!important}
+.how,.how-it-works,.popular,.why,.services,.after-enquiry,.about,.enquiry,.faq,.section-alt,.soft-section,.standalone-page,.not-listed{background:#eaf6fd!important;color:#243746!important}
+.audience,.statement{background:#287eb8!important;color:#fff!important}
+.category-card,.popular-grid a,.why-grid article,.after-grid article,.audience article,.faq-list details,.category-services-panel,form,.provider-registration-form{background:#fff!important;border-color:#d9eaf5!important;color:#243746!important}
+.category-card:hover,.popular-grid a:hover{border-color:#e63946!important}
+.selected-service{background:#eaf6fd!important;color:#287eb8!important}
+input,textarea,select{background:#fff!important;color:#243746!important;border-color:#d9eaf5!important}
+input:focus,textarea:focus,select:focus{outline-color:#e63946!important;border-color:#e63946!important}
+footer,.site-footer,.standalone-footer{background:#287eb8!important;color:#fff!important}
+.whatsapp-float,.whatsapp-button,.inline-whatsapp{background:#25D366!important;color:#fff!important}
+::selection{background:#cdeeff!important;color:#243746!important}
