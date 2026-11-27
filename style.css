@@ -1941,3 +1941,39 @@ section.audience .audience-grid article .button.primary{background:#e63946!impor
 section.audience .audience-grid article .button.secondary{background:#83c9f4!important;color:#243746!important;border-color:#83c9f4!important}
 section.audience .audience-grid article .button.primary:hover{background:#c92d3a!important}
 section.audience .audience-grid article .button.secondary:hover{background:#55aee8!important}
+
+
+/* Brand polish: unified spacing, typography, buttons, cards and colour hierarchy */
+:root{--brand-blue:#287eb8;--sky:#83c9f4;--scarlet:#e63946;--cloud:#f8fcff;--deep-blue:#236b9d;--card-radius:16px;--button-radius:9px}
+body{background:var(--cloud)!important;color:#243746!important}
+.section{padding:clamp(64px,7vw,92px) 0!important}
+.statement,.section h2,.not-listed h2,.audience h2{font-size:clamp(2.3rem,5vw,4.25rem)!important;line-height:1.08!important;letter-spacing:-.035em!important}
+.section h2,.statement h2,.not-listed h2{max-width:850px}
+.eyebrow{margin-bottom:14px!important;letter-spacing:.16em!important;color:var(--deep-blue)!important}
+/* A single button shape and sizing rhythm */
+.button,.nav-cta,.service-search button,.category-services-close,.popular-grid a{border-radius:var(--button-radius)!important}
+.button{padding:13px 20px!important;font-size:.9rem!important;font-weight:700!important;transition:background .2s ease,transform .2s ease!important}
+.nav-cta{padding:12px 18px!important;font-size:.88rem!important;font-weight:700!important}
+.button.primary,.primary,.nav-cta,.service-search button{background:var(--scarlet)!important;color:#fff!important;border:1px solid var(--scarlet)!important}
+.button.primary:hover,.primary:hover,.nav-cta:hover,.service-search button:hover{background:#c92d3a!important;border-color:#c92d3a!important}
+.button.secondary,.secondary{background:var(--sky)!important;color:#243746!important;border:1px solid var(--sky)!important}
+.button.secondary:hover,.secondary:hover{background:#55aee8!important}
+.button.light,.light{background:#fff!important;color:var(--deep-blue)!important;border:1px solid #d9eaf5!important}
+/* Uniform cards */
+.category-card,.popular-grid a,.why-grid article,.after-grid article,.audience-grid article,.faq-list details,.category-services-panel,.provider-card,form,.provider-registration-form{border-radius:var(--card-radius)!important}
+.popular-grid a,.why-grid article,.after-grid article,.audience-grid article,.category-services-panel,form,.provider-registration-form{box-shadow:0 5px 18px rgba(36,55,70,.055)!important;border:1px solid #d9eaf5!important}
+.popular-grid a,.why-grid article,.after-grid article{padding:24px!important}
+.category-card{border-radius:var(--card-radius)!important}
+.category-card:hover,.popular-grid a:hover{transform:translateY(-3px)!important}
+/* Colour roles: mostly cloud white, blue for grouping, red only for key actions */
+.site-header{background:rgba(248,252,255,.97)!important;border-color:#d9eaf5!important}
+.brand,.nav nav a{color:var(--deep-blue)!important}
+.nav nav a:hover{color:var(--scarlet)!important}
+.hero{background:radial-gradient(circle at 18% 22%,rgba(131,201,244,.28),transparent 23%),radial-gradient(circle at 82% 72%,rgba(85,174,232,.15),transparent 25%),radial-gradient(circle at 50% 25%,rgba(205,238,255,.5),transparent 28%),var(--cloud)!important}
+.hero h1 span{color:var(--scarlet)!important;text-decoration-color:var(--sky)!important}
+.audience,.how-it-works,.how,.popular,.why,.services,.after-enquiry,.about,.enquiry,.faq,.section-alt,.soft-section,.standalone-page,.not-listed{background:#eaf6fd!important;color:#243746!important}
+.statement,.audience{background:var(--deep-blue)!important;color:#fff!important}
+.audience-grid article,.audience article,.popular-grid a,.why-grid article,.after-grid article,.faq-list details,form,.provider-registration-form,.category-services-panel{background:#fff!important;color:#243746!important}
+.audience-grid article p,.audience-grid article h3,.audience-grid article span{color:#243746!important}
+footer,.site-footer,.standalone-footer{background:var(--deep-blue)!important;color:#fff!important}
+@media(max-width:760px){.section{padding:58px 0!important}.button{padding:12px 16px!important}.audience-grid,.after-grid{gap:16px}}
