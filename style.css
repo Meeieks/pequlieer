@@ -1877,3 +1877,21 @@ body{background:var(--paper);color:var(--ink)}
 .category-card:hover{border-color:var(--teal)}
 footer,.site-footer{background:var(--dark);color:#f7f4ec}
 input:focus,textarea:focus,select:focus{outline-color:var(--accent);border-color:var(--accent)}
+
+
+/* Sky blue and cloud white colour refresh */
+:root{--ink:#263746;--muted:#657786;--paper:#f8fcff;--white:#ffffff;--line:#dceaf4;--accent:#55aee8;--dark:#287eb8;--yellow:#cdeeff;--teal:#83c9f4;--pink:#b6ddf5;--purple:#55aee8;--soft:#eaf6fd}
+body{background:var(--paper);color:var(--ink)}
+.site-header{background:rgba(248,252,255,.95);border-bottom-color:rgba(40,126,184,.16)}
+.brand{color:var(--dark)}.nav nav a:hover{color:var(--accent)}
+.nav-cta,.service-search button,.button,.btn-primary{background:var(--accent);box-shadow:0 8px 22px rgba(85,174,232,.18)}
+.nav-cta:hover,.service-search button:hover,.button:hover,.btn-primary:hover{background:#368fc9}
+.hero{background:radial-gradient(circle at 18% 22%,rgba(131,201,244,.30),transparent 23%),radial-gradient(circle at 82% 72%,rgba(85,174,232,.18),transparent 25%),radial-gradient(circle at 50% 25%,rgba(205,238,255,.52),transparent 28%),var(--paper)}
+.hero h1 span{color:var(--accent);text-decoration-color:var(--yellow)}
+.hero-kicker{background:var(--dark)}.hero-kicker span{color:var(--yellow)}
+.eyebrow{color:var(--accent)}
+.how-it-works,.section-alt,.soft-section{background:#eaf6fd}
+.category-card,.card,.faq-list details,.category-services-panel,form{background:var(--white);border-color:var(--line)}
+.category-card:hover{border-color:var(--teal)}
+footer,.site-footer{background:var(--dark);color:#f8fcff}
+input:focus,textarea:focus,select:focus{outline-color:var(--accent);border-color:var(--accent)}
