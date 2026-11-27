@@ -1851,3 +1851,11 @@ input,textarea,select{border-radius:2px}
 .how-steps p{max-width:38ch;margin:0;color:#5b675f;font-size:.93rem;line-height:1.7}
 .digital-examples .digital-page-note{margin-top:25px}
 @media(max-width:650px){.how-steps{grid-template-columns:1fr;gap:18px}.how-steps article{padding-top:15px}.how-steps article>span{margin-bottom:10px}}
+
+
+/* Request form: use the available width after the introductory panel is removed. */
+.request-form-wide{
+  grid-column:1 / -1;
+  max-width:850px;
+  margin-inline:auto;
+}
