@@ -67,14 +67,7 @@
   <div class="market-hero-copy">
     <div class="hero-kicker">LOCAL SERVICES <span>•</span> CAPE TOWN</div>
     <h1>You need it.<br><span>We connect it.</span></h1>
-    <p class="hero-copy">Pequlieer gives Cape Town customers one place to start. Tell us what you need: we take on work that fits our own skills and experience, and consider suitable local providers for other jobs. We also offer practical website and digital support to small businesses.</p>
-    <form class="service-search" id="service-search" role="search">
-      <label class="visually-hidden" for="service-search-input">Search for a service</label>
-      <input id="service-search-input" type="search" placeholder="What do you need help with?" autocomplete="off">
-      <button type="submit">Find Help <span>→</span></button>
-    </form>
-    <div class="search-examples" aria-label="Popular searches"><span>Popular:</span><button type="button" data-search-term="cleaning">Cleaning</button><button type="button" data-search-term="moving">Moving help</button><button type="button" data-search-term="website">Website help</button><button type="button" data-search-term="english tutor">English tutor</button></div>
-    <div class="hero-actions"><a class="button primary" href="#browse-services">Browse Services <span>↓</span></a><a class="button light" href="request.html">Tell Us What You Need</a></div>
+        <div class="hero-actions"><a class="button primary" href="#browse-services">Browse Services <span>↓</span></a><a class="button light" href="request.html">Tell Us What You Need</a></div>
   </div>
   <aside class="hero-photo-feature" aria-label="Practical help from local people">
     <img src="https://images.pexels.com/photos/8292804/pexels-photo-8292804.jpeg?auto=compress&cs=tinysrgb&w=1200" width="1200" height="800" fetchpriority="high" decoding="async" alt="A professional welcoming a client at a home entrance">
@@ -84,7 +77,6 @@
 
 <section class="popular section" id="browse-services"><div class="wide">
   <div class="browse-heading"><div><p class="eyebrow">BROWSE CATEGORIES</p><h2>What do you need help with?</h2><p class="section-intro">Search above or choose a category to describe your request.</p></div><a class="browse-all" href="request.html">Not sure what to choose? Ask us <span aria-hidden="true">→</span></a></div>
-  <p id="category-search-status" class="category-search-status" aria-live="polite" hidden></p>
   <div class="popular-grid">
     <a class="popular-card" href="#category-services-panel" aria-expanded="false" aria-controls="category-services-panel" data-service="Cleaning & Household Assistance" data-request="I need cleaning or household assistance." data-keywords="cleaning cleaner house cleaning household deep clean move-in move-out organisation organizing organising tidy home domestic help">
       <img class="popular-card-image" width="900" height="600" decoding="async" src="https://images.pexels.com/photos/6196692/pexels-photo-6196692.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Professional cleaners working in a modern home" loading="lazy"><span class="popular-card-copy"><strong>Cleaning & Household Assistance</strong><small>General cleaning, deep cleaning, household organisation</small></span><span class="popular-arrow" aria-hidden="true">＋</span>
@@ -113,11 +105,9 @@
   </div>
   <section class="category-services-panel" id="category-services-panel" aria-labelledby="category-services-title" hidden>
     <div class="category-services-heading">
-      <div><p class="eyebrow">CHOOSE A SERVICE</p><h3 id="category-services-title" tabindex="-1">Services in this category</h3><p id="category-services-description">Choose the service that best matches what you need.</p></div>
       <button class="category-services-close" id="category-services-close" type="button" aria-label="Close service list">×</button>
     </div>
     <div class="category-service-links" id="category-service-links"></div>
-    <p class="category-services-footnote">Choose a service to continue to the enquiry form. You can review the details before sending your request.</p>
   </section>
   <div class="category-cta-row"><p>Can’t find the right category? Tell us in your own words.</p><a class="button primary" href="request.html">Make a request <span>→</span></a></div>
 </div></section>
@@ -136,7 +126,7 @@
   </div>
 </div></section>
 
-<section class="how-it-works section" id="how-it-works"><div class="wide"><p class="eyebrow">A CLEAR WAY FORWARD</p><h2>Start with a conversation.</h2><p class="how-intro">You don't need to have every detail figured out. Tell us what you have in mind and we'll help clarify the next step.</p><div class="how-steps"><article><span>01</span><h3>Tell us what you need</h3><p>Send an enquiry with a few details about the service, project or experience you're looking for.</p></article><article><span>02</span><h3>We discuss the options</h3><p>We clarify the requirements and consider whether we can help directly or connect you with a suitable provider.</p></article><article><span>03</span><h3>Agree before work begins</h3><p>Price, timing, responsibilities and any additional costs are discussed before you decide to proceed.</p></article></div></div></section>
+
 
 <section class="audience section"><div class="wide"><p class="eyebrow">YOUR NEXT STEP</p><h2>Looking for help—or ready to offer it?</h2><div class="audience-grid"><article><div class="audience-card-copy"><span>FOR CUSTOMERS</span><h3>I Need a Service</h3><p>Looking for someone to help with a job, project or problem? Tell us what you need and we’ll help you work out the next step.</p><a class="button primary" href="#browse-services">Browse Categories <span>→</span></a></div></article><article><div class="audience-card-copy"><span>FOR SERVICE PROVIDERS</span><h3>Partner with Pequlieer</h3><p>Have a skill or service to offer? Tell us about your experience and explore opportunities to work with us.</p><a class="button secondary" href="join.html">Become a Partner <span>→</span></a></div></article></div></div></section>
 
@@ -158,16 +148,12 @@
 <a class="whatsapp-float" href="https://wa.me/27681226185?text=Hi%20Pequlieer%2C%20I%20need%20help%20with%20a%20service." target="_blank" rel="noopener" aria-label="Chat with Pequlieer on WhatsApp">Chat with Pequlieer</a>
 <script>
 (function(){
-  const searchForm = document.getElementById("service-search");
-  const searchInput = document.getElementById("service-search-input");
   const categoryCards = Array.from(document.querySelectorAll("#browse-services .popular-card"));
-  const categoryStatus = document.getElementById("category-search-status");
   const categoryPanel = document.getElementById("category-services-panel");
   const categoryPanelTitle = document.getElementById("category-services-title");
   const categoryPanelDescription = document.getElementById("category-services-description");
   const categoryServiceLinks = document.getElementById("category-service-links");
   const closePanelButton = document.getElementById("category-services-close");
-  let currentSearchTerm = new URLSearchParams(window.location.search).get("q") || "";
   let activeCategory = "";
   let activeCategoryTrigger = null;
 
@@ -186,52 +172,11 @@
     "Something Else": ["A service not listed here", "I'm not sure which service I need", "Help me choose the right category"]
   };
 
-  function clean(value){
-    return (value || "").toLowerCase().replace(/[^a-z0-9\s&-]/g," ").replace(/\s+/g," ").trim();
-  }
-
-  function applyCategorySearch(term, shouldScroll){
-    currentSearchTerm = term.trim();
-    if(!currentSearchTerm){
-      categoryCards.forEach(card => card.hidden = false);
-      if(categoryStatus){categoryStatus.hidden = true;categoryStatus.textContent = "";}
-    }else{
-      const tokens = clean(currentSearchTerm).split(" ").filter(word => word.length > 1);
-      let matched = 0;
-      categoryCards.forEach(card => {
-        const haystack = clean((card.dataset.keywords || "") + " " + card.innerText + " " + (card.dataset.service || ""));
-        const isMatch = tokens.some(token => haystack.includes(token));
-        card.hidden = !isMatch;
-        if(isMatch) matched++;
-      });
-      if(categoryStatus){
-        categoryStatus.hidden = false;
-        if(matched){
-          categoryStatus.textContent = "Showing " + matched + " " + (matched === 1 ? "category" : "categories") + " related to “" + currentSearchTerm + "”. Choose a category to see its services.";
-        }else{
-          categoryCards.forEach(card => card.hidden = false);
-          categoryStatus.textContent = "We couldn’t match “" + currentSearchTerm + "” to a category, so all categories are shown. Choose the closest fit or select Something Else.";
-        }
-      }else if(!matched){
-        categoryCards.forEach(card => card.hidden = false);
-      }
-    }
-    if(searchInput) searchInput.value = currentSearchTerm;
-    if(shouldScroll){
-      const url = new URL(window.location.href);
-      if(currentSearchTerm) url.searchParams.set("q",currentSearchTerm); else url.searchParams.delete("q");
-      url.hash = "browse-services";
-      window.history.replaceState(null,"",url.pathname + url.search + url.hash);
-      document.getElementById("browse-services").scrollIntoView({behavior:getScrollBehavior(),block:"start"});
-    }
-  }
-
   function serviceRequestUrl(category, specific){
     const params = new URLSearchParams();
     params.set("service",category);
     params.set("specific",specific);
     params.set("request","I'm looking for " + specific + " under " + category + ".");
-    if(currentSearchTerm) params.set("search",currentSearchTerm);
     return "request.html?" + params.toString();
   }
 
@@ -283,23 +228,6 @@
     activeCategoryTrigger = null;
   }
 
-  if(searchForm && searchInput){
-    searchForm.addEventListener("submit",function(event){
-      event.preventDefault();
-      const term = searchInput.value.trim();
-      if(!term){searchInput.focus();return;}
-      closeCategoryServices(false);
-      applyCategorySearch(term,true);
-    });
-  }
-
-  document.querySelectorAll("[data-search-term]").forEach(button => {
-    button.addEventListener("click",function(){
-      if(searchInput) searchInput.value = button.dataset.searchTerm || "";
-      if(searchForm) searchForm.requestSubmit();
-    });
-  });
-
   categoryCards.forEach(card => {
     card.addEventListener("click",function(event){
       event.preventDefault();
@@ -332,12 +260,6 @@
     card.addEventListener("click",choose);
   });
 
-  if(currentSearchTerm){
-    applyCategorySearch(currentSearchTerm,false);
-    if(window.location.hash === "#browse-services"){
-      setTimeout(function(){document.getElementById("browse-services").scrollIntoView({block:"start"});},80);
-    }
-  }
 })();
 </script>
 </body>
