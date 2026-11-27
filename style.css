@@ -1859,3 +1859,21 @@ input,textarea,select{border-radius:2px}
   max-width:850px;
   margin-inline:auto;
 }
+
+
+/* Olive and plum colour refresh */
+:root{--ink:#292b25;--muted:#68695e;--paper:#f7f4ec;--white:#fffdf9;--line:#ded8c9;--accent:#70445f;--dark:#465238;--yellow:#c5b77b;--teal:#75845a;--pink:#b18b9f;--purple:#70445f;--soft:#ebe6d9}
+body{background:var(--paper);color:var(--ink)}
+.site-header{background:rgba(247,244,236,.94);border-bottom-color:rgba(70,82,56,.16)}
+.brand{color:var(--dark)}.nav nav a:hover{color:var(--accent)}
+.nav-cta,.service-search button,.button,.btn-primary{background:var(--accent);box-shadow:0 8px 22px rgba(112,68,95,.18)}
+.nav-cta:hover,.service-search button:hover,.button:hover,.btn-primary:hover{background:#5e374f}
+.hero{background:radial-gradient(circle at 18% 22%,rgba(117,132,90,.22),transparent 23%),radial-gradient(circle at 82% 72%,rgba(112,68,95,.18),transparent 25%),radial-gradient(circle at 50% 25%,rgba(197,183,123,.24),transparent 28%),var(--paper)}
+.hero h1 span{color:var(--accent);text-decoration-color:var(--yellow)}
+.hero-kicker{background:var(--dark)}.hero-kicker span{color:var(--yellow)}
+.eyebrow{color:var(--accent)}
+.how-it-works,.section-alt,.soft-section{background:#eee9de}
+.category-card,.card,.faq-list details,.category-services-panel,form{background:var(--white);border-color:var(--line)}
+.category-card:hover{border-color:var(--teal)}
+footer,.site-footer{background:var(--dark);color:#f7f4ec}
+input:focus,textarea:focus,select:focus{outline-color:var(--accent);border-color:var(--accent)}
